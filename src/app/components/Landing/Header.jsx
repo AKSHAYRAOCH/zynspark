@@ -2,6 +2,9 @@
 import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import Link from 'next/link';
+import Image from 'next/image';
+
+import logo from '../../../../public/images/logo.svg'
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -92,7 +95,7 @@ export const Header = () => {
           </button>
           <h1 className="text-xl sm:text-2xl font-bold">
             <Link href="/" className="block">
-              Zynspark
+              <Image src={logo} width={192} height={28} alt='Logo' />
             </Link>
           </h1>
         </div>

@@ -6,7 +6,8 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
-import { FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
+import {  FaTwitter, FaLinkedin } from "react-icons/fa";
+import { FaReddit } from "react-icons/fa";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const teamMembers = [
@@ -29,14 +30,14 @@ const teamMembers = [
     socials: { twitter: "#", instagram: "#", linkedin: "#" },
   },
   {
-    name: "Akshay",
-    role: "Developer @Zynspark",
-    image: "/images/landingImages/team/Akshay.svg",
+    name: "Charan",
+    role: "Product designer @Zynspark",
+    image: "/images/landingImages/team/Charan.svg",
     socials: { twitter: "#", instagram: "#", linkedin: "#" },
   },
   {
-    name: "Akshay",
-    role: "Developer @Zynspark",
+    name: "Rakshit",
+    role: "Documentation Researcher",
     image: "/images/landingImages/team/Akshay.svg",
     socials: { twitter: "#", instagram: "#", linkedin: "#" },
   },
@@ -100,8 +101,8 @@ export default function OurTeam() {
                   <a href={member.socials.twitter} target="_blank" rel="noreferrer">
                     <FaTwitter className="w-[29px] h-[29px]" />
                   </a>
-                  <a href={member.socials.instagram} target="_blank" rel="noreferrer">
-                    <FaInstagram className="w-[29px] h-[29px]" />
+                  <a href={member.socials.reddit} target="_blank" rel="noreferrer">
+                    <FaReddit className="w-[29px] h-[29px]" />
                   </a>
                   <a href={member.socials.linkedin} target="_blank" rel="noreferrer">
                     <FaLinkedin className="w-[29px] h-[29px]" />

@@ -92,12 +92,14 @@ export const Services = () => {
                 centeredSlides: false
               },
               768: { 
-                slidesPerView: 2,
-                spaceBetween: 24
+                slidesPerView: 3,
+                spaceBetween: 15,
+                centeredSlides: false,
               },
               1024: { 
                 slidesPerView: 3,
-                spaceBetween: 32
+                spaceBetween: 12,
+                centeredSlides: false,
               },
             }}
           >

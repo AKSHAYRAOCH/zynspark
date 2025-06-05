@@ -36,7 +36,7 @@ export default function AboutUs() {
           <div>
             <Image 
               src={AboutLine} 
-              className="pt-4 w-[60px] sm:w-[80px]" 
+              className="pt-1 w-[60px] sm:w-[80px] md:h-[220px] " 
               alt="AboutLine" 
             />
           </div>

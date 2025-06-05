@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Header } from "./Header";
 import Animations from "../Animations/Animations";
 import Image from "next/image";
@@ -10,10 +10,36 @@ import Image3 from "../../../../public/images/landingImages/HeroSection/Group 82
 import Image4 from "../../../../public/images/landingImages/HeroSection/Group 83.png";
 import Link from "next/link";
 import Arrow from "../../../../public/images/arrow.svg";
+import { motion, AnimatePresence } from "framer-motion";
 
 const HeroSection = () => {
+
+  const keywords = [
+    "Web Design",
+    "UI/UX",
+    "Branding",
+    "Marketing",
+    "Ads Management",
+    "Social Media Marketing",
+    "Content Writing",
+  ];
+
+  const [currentKeyword, setCurrentKeyword] = useState(0);
+  const [hasMounted, setHasMounted] = useState(false);
+
+
+  useEffect(() => {
+    setHasMounted(true);
+    const interval = setInterval(() => {
+      setCurrentKeyword((prev) => (prev + 1) % keywords.length);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, []);
+
+
   return (
-    <section className="relative bg-white overflow-hidden h-[90vh] min-h-[600px] md:h-screen">
+    <section className="relative bg-white overflow-hidden h-[90vh] min-h-[600px] md:h-screen border-none outline-none">
+
       {/* 🧩 Matter.js Canvas Background */}
       <div className="absolute inset-0 z-0">
         <Animations />
@@ -98,11 +124,25 @@ const HeroSection = () => {
           <h1 className="text-[32px] sm:text-5xl md:text-[80px] leading-[1.2] md:leading-[96px] font-semibold text-center">
             End-to-End Support for:
             <br className="hidden sm:block" />
-            <span className="text-[#A270FF]">Web Design</span>
+            {hasMounted && (
+            <AnimatePresence mode="wait">
+                <motion.span
+                  key={keywords[currentKeyword]}
+                  initial={{ y: "100%", opacity: 0 }}
+                  animate={{ y: "0%", opacity: 1 }}
+                  exit={{ y: "-100%", opacity: 0 }}
+                  transition={{ duration: 0.4 }}
+                  className="absolute top-0 left-0 w-full text-center text-[#A270FF] md:my-25 my-20" 
+                >
+                  {keywords[currentKeyword]}
+                </motion.span>
+              </AnimatePresence>
+              )}
+            {/* <span className="text-[#A270FF]">Web Design</span> */}
           </h1>
         </div>
 
-        <div className="flex justify-center items-center px-2 sm:px-0">
+        <div className="flex justify-center items-center px-2 sm:px-0 pt-25">
           <h2 className="text-center mt-4 md:mt-[20px] text-sm sm:text-base md:text-lg max-w-[500px] mx-auto">
             Zynspark blends creativity and strategy to help your brand grow.
           </h2>

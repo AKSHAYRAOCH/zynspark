@@ -10,9 +10,9 @@ export const Footer = () => {
       <div className="max-w-7xl mx-auto w-full flex flex-col items-center sm:items-start sm:flex-row justify-between">
         <div className="text-blue-500 font-semibold text-lg mb-4 sm:mb-0">Zynspark</div>
         <div className="flex gap-6 mb-6 sm:mb-0 text-xl">
-          <RiFacebookCircleFill className="hover:text-blue-400 cursor-pointer" />
+          {/* <RiFacebookCircleFill className="hover:text-blue-400 cursor-pointer" />
           <FaInstagram className="hover:text-pink-500 cursor-pointer" />
-          <BsTwitterX className="hover:text-gray-300 cursor-pointer" />
+          <BsTwitterX className="hover:text-gray-300 cursor-pointer" /> */}
           <FaLinkedin className="hover:text-blue-400 cursor-pointer" />
         </div>
       </div>
