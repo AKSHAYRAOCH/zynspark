@@ -8,7 +8,7 @@ import AboutUs from './AboutUs'
 import OurTeam from './OurTeam'
 import { LetsConnect } from './LetsConnect'
 
-export const Landing = () => {
+const Landing = () => {
   return (
     <div>
           <HeroSection />
@@ -22,3 +22,6 @@ export const Landing = () => {
     </div>
   )
 }
+
+
+export default Landing
