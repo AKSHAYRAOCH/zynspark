@@ -1,6 +1,23 @@
 @import "tailwindcss";
 
-section{
-  padding: 64px;
 
+section {
+  padding: 64px;
 }
+
+@media (max-width: 640px) {
+  section {
+    padding: 24px;
+  }
+}
+
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
