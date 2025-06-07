@@ -7,7 +7,7 @@ const testimonials = [
       position: "Position, Company name",
       image: "/images/serviceimages/avatar1.svg",
       stars: 5,
-      text: "Working with company was a game-changer for us...",
+      text: "Working with company was a game-changer for us. Their frontend team delivered a pixel-perfect UI for our immersive VR dashboard — responsive, efficient, and fully optimized for performance. Their ability to understand product vision and translate it into intuitive design truly stood out.",
       categories: [ "Digital Marketing", "Branding", "Web Design" , "Pitch Desk"],
     },
     {
@@ -15,7 +15,7 @@ const testimonials = [
       position: "Position, Company name",
       image: "/images/serviceimages/avatar1.svg",
       stars: 5,
-      text: "We partnered with company to revamp our frontend layer...",
+      text: "We partnered with company to revamp our frontend layer. Their team was fast, focused, and full of good ideas. They helped us launch on time with a sleek user interface and minimal bugs. We look forward to working together again.",
       categories: ["Pitch Desk", "Digital Marketing", "App Development", "Web Design"],
     },
     {
