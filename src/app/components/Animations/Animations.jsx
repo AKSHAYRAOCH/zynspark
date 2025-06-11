@@ -48,6 +48,17 @@ const MatterScene = () => {
         height,
         wireframes: false,
         background: "transparent",
+        showVelocity: false,
+        showAngleIndicator: false,
+        showDebug: false,
+        showBounds: false,
+        showBroadphase: false,
+        showIds: false,
+        showSeparations: false,
+        showCollisions: false,
+        showVertexNumbers: false,
+        showConvexHulls: false,
+        showInternalEdges: false,
       },
     });
 
@@ -61,6 +72,9 @@ const MatterScene = () => {
       render.canvas.style.outline = "none";
       render.canvas.style.background = "transparent";
       render.canvas.style.display = "block";
+      render.canvas.style.boxSizing = "border-box";
+      render.canvas.style.margin = "0";
+      render.canvas.style.padding = "0";
     }
 
     Matter.Render.run(render);
@@ -68,10 +82,42 @@ const MatterScene = () => {
     Matter.Runner.run(runner, engine);
 
     const createWalls = () => [
-      Matter.Bodies.rectangle(width / 2, height + 10, width, 20, { isStatic: true }),
-      Matter.Bodies.rectangle(-10, height / 2, 20, height, { isStatic: true }),
-      Matter.Bodies.rectangle(width + 10, height / 2, 20, height, { isStatic: true }),
-      Matter.Bodies.rectangle(width / 2, -10, width, 20, { isStatic: true }),
+      Matter.Bodies.rectangle(width / 2, height + 10, width, 20, {
+        isStatic: true,
+        render: {
+          fillStyle: "transparent",
+          strokeStyle: "transparent",
+          lineWidth: 0,
+          visible: false
+        }
+      }),
+      Matter.Bodies.rectangle(-10, height / 2, 20, height, {
+        isStatic: true,
+        render: {
+          fillStyle: "transparent",
+          strokeStyle: "transparent",
+          lineWidth: 0,
+          visible: false
+        }
+      }),
+      Matter.Bodies.rectangle(width + 10, height / 2, 20, height, {
+        isStatic: true,
+        render: {
+          fillStyle: "transparent",
+          strokeStyle: "transparent",
+          lineWidth: 0,
+          visible: false
+        }
+      }),
+      Matter.Bodies.rectangle(width / 2, -10, width, 20, {
+        isStatic: true,
+        render: {
+          fillStyle: "transparent",
+          strokeStyle: "transparent",
+          lineWidth: 0,
+          visible: false
+        }
+      }),
     ];
 
     let walls = createWalls();
