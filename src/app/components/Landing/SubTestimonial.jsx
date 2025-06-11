@@ -2,42 +2,89 @@ import React from "react";
 import Image from "next/image";
 
 const testimonials = [
-  {
-    name: "Name Surname",
-    position: "Position, Company name",
-    image: "/images/serviceimages/avatar1.svg",
-    stars: 5,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-  },
-  {
-    name: "Name Surname",
-    position: "Position, Company name",
-    image: "/images/serviceimages/avatar1.svg",
-    stars: 5,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-  },
-  {
-    name: "Name Surname",
-    position: "Position, Company name",
-    image: "/images/serviceimages/avatar1.svg",
-    stars: 5,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-  },
-  {
-    name: "Name Surname",
-    position: "Position, Company name",
-    image: "/images/serviceimages/avatar1.svg",
-    stars: 5,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-  },
-  {
-    name: "Name Surname",
-    position: "Position, Company name",
-    image: "/images/serviceimages/avatar1.svg",
-    stars: 5,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-  },
-];
+    {
+      name: "VR Tech",
+      position: "Position, Company name",
+      image: "/images/serviceimages/avatar1.svg",
+      stars: 5,
+      text: "Working with company was a game-changer for us. Their frontend team delivered a pixel-perfect UI for our immersive VR dashboard — responsive, efficient, and fully optimized for performance. Their ability to understand product vision and translate it into intuitive design truly stood out.",
+      categories: [ "Digital Marketing", "Branding", "Web Design" , "Pitch Desk"],
+    },
+    {
+      name: "Blumi",
+      position: "Position, Company name",
+      image: "/images/serviceimages/avatar1.svg",
+      stars: 5,
+      text: "We partnered with company to revamp our frontend layer. Their team was fast, focused, and full of good ideas. They helped us launch on time with a sleek user interface and minimal bugs. We look forward to working together again.",
+      categories: ["Pitch Desk", "Digital Marketing", "App Development", "Web Design"],
+    },
+    {
+      name: "FinEdge",
+      position: "Position, Company name",
+      image: "/images/serviceimages/avatar1.svg",
+      stars: 5,
+      text: "From logo design to tone of voice, every branding element aligned perfectly with our core values. It’s rare to find such consistency and innovation.",
+      categories: ["Brand Strategy", "Digital Marketing" , "Pitch Desk"],
+    },
+    {
+      name: "NextGen Mobility",
+      position: "Position, Company name",
+      image: "/images/serviceimages/avatar1.svg",
+      stars: 5,
+      text: "We needed a brand refresh that reflected our transition to EVs, and the team nailed it. The rebranding sparked renewed trust from our investors and customers alike.",
+      categories: ["Brand Strategy", "Pitch Desk"],
+    },
+    {
+      name: "GreenGrid Energy",
+      position: "Position, Company name",
+      image: "/images/serviceimages/avatar1.svg",
+      stars: 5,
+      text: "Our brand now reflects our sustainable mission thanks to their thoughtful, eco-conscious design philosophy. A brilliant team to work with!",
+      categories: ["Brand Strategy", "App Development" , "Pitch Desk"],
+    },
+    {
+      name: "EduWave",
+      position: "Position, Company name",
+      image: "/images/serviceimages/avatar1.svg",
+      stars: 5,
+      text: "They transformed our dull identity into a youthful, dynamic brand that resonates with students and educators alike. The storytelling behind the branding was top-notch.",
+      categories: ["Brand Strategy" , 'App Development'],
+    },
+    {
+        name: "Finsq",
+        position: "CTO, Tech Firm D",
+        image: "/images/serviceimages/avatar1.svg",
+        stars: 5,
+        text: "Blumi’s product saw a major UI/UX uplift thanks to DevNexus. The new design system built with Tailwind and React improved our usability scores by 35%. The DevNexus team was proactive, communicative, and deeply committed to quality.”",
+        categories: ["Web Design", "Marketing" , "Brand Strategy"],
+      },
+      {
+        name: "MindNest",
+        position: "Head of Product, Company B",
+        image: "/images/serviceimages/avatar1.svg",
+        stars: 5,
+        text: "Partnering with Blumi was one of the best tech decisions we’ve made. Their attention to UI details, performance optimization, and user-first thinking transformed our product experience. They work like an in-house team.",
+        categories: ["Web Design", 'App Development' , "Digital Marketing"],
+      },
+      {
+        name: " EdTrack",
+        position: "Manager, Org C",
+        image: "/images/serviceimages/avatar1.svg",
+        stars: 5,
+        text: "Blumi’s frontend team helped us revamp our e-learning platform with modern, scalable code. From React components to mobile responsiveness, everything was delivered clean and fast. Communication was always clear and deadlines were met without compromise.",
+        categories: ["Web Design", "App Development" , "Digital Marketing"],
+      },
+      {
+        name: "HealthSpan Clinics",
+        position: "Manager, Org C",
+        image: "/images/serviceimages/avatar1.svg",
+        stars: 5,
+        text: "We were amazed by the emotional connection the new branding created with our patients. It’s both professional and human — exactly what we needed.",
+        categories: ["Web Design", "App Development" , "Digital Marketing" , "Pitch Desk"],
+      },
+
+  ];
+  
 
 const Star = ({ filled }) => (
   <svg
@@ -74,39 +121,44 @@ const TestimonialCard = ({ name, position, image, stars, text }) => (
   </div>
 );
 
-const SubTestimonials = () => {
-  return (
-    <div className="bg-white">
-      {/* Mobile View - Single Column */}
-      <div className="md:hidden px-4 py-8">
-        <div className="flex overflow-x-auto gap-4 pb-4 hide-scrollbar">
-          {testimonials.map((t, index) => (
-            <div key={index} className="flex-shrink-0 w-64">
-              <TestimonialCard {...t} />
+const SubTestimonials = ({ selectedCategory }) => {
+    const filteredTestimonials = selectedCategory
+      ? testimonials.filter(t => t.categories?.includes(selectedCategory))
+      : testimonials;
+  
+    return (
+      <div className="bg-white">
+        {/* Mobile View */}
+        <div className="md:hidden px-4 py-8">
+          <div className="flex overflow-x-auto gap-4 pb-4 hide-scrollbar">
+            {filteredTestimonials.map((t, index) => (
+              <div key={index} className="flex-shrink-0 w-64">
+                <TestimonialCard {...t} />
+              </div>
+            ))}
+          </div>
+        </div>
+  
+        {/* Desktop View */}
+        <div className="hidden md:flex gap-4 lg:gap-10 px-4 lg:px-8 py-8">
+          <div className="w-[235px] lg:max-w-[300px] h-[500px] overflow-y-auto hide-scrollbar">
+            <div className="grid grid-cols-1 gap-6 lg:gap-8">
+              {filteredTestimonials.slice(0, Math.ceil(filteredTestimonials.length / 2)).map((t, index) => (
+                <TestimonialCard key={index} {...t} />
+              ))}
             </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Desktop View - Double Column Scroll */}
-      <div className="hidden md:flex gap-4 lg:gap-10 px-4 lg:px-8 py-8">
-        <div className="w-[235px]  lg:max-w-[300px] h-[500px] overflow-y-auto hide-scrollbar mt-50">
-          <div className="grid grid-cols-1 gap-6 lg:gap-8">
-            {testimonials.map((t, index) => (
-              <TestimonialCard key={index} {...t} />
-            ))}
           </div>
-        </div>
-        <div className="w-[235px] lg:max-w-[300px] h-[700px] overflow-y-auto hide-scrollbar ">
-          <div className="grid grid-cols-1 gap-6 lg:gap-8">
-            {testimonials.map((t, index) => (
-              <TestimonialCard key={index} {...t} />
-            ))}
+          <div className="w-[235px] lg:max-w-[300px] h-[700px] overflow-y-auto hide-scrollbar">
+            <div className="grid grid-cols-1 gap-6 lg:gap-8">
+              {filteredTestimonials.slice(Math.ceil(filteredTestimonials.length / 2)).map((t, index) => (
+                <TestimonialCard key={index} {...t} />
+              ))}
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  );
-};
+    );
+  };
+  
 
 export default SubTestimonials;

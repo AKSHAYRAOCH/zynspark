@@ -15,31 +15,31 @@ const teamMembers = [
     name: "Abhiram",
     role: "UI/UX designer @Zynspark",
     image: "/images/landingImages/team/Abhiram.svg",
-    socials: { twitter: "#", instagram: "#", linkedin: "#" },
+    socials: { twitter: "#", instagram: "#", linkedin: 'https://www.linkedin.com/company/zynspark/' },
   },
   {
     name: "Shanmukh",
     role: "AI Researcher @Zynspark",
     image: "/images/landingImages/team/Shanmukh.svg",
-    socials: { twitter: "#", instagram: "#", linkedin: "#" },
+    socials: { twitter: "#", instagram: "#", linkedin: "https://www.linkedin.com/company/zynspark/" },
   },
   {
     name: "Akshay",
     role: "Developer @Zynspark",
     image: "/images/landingImages/team/Akshay.svg",
-    socials: { twitter: "#", instagram: "#", linkedin: "#" },
+    socials: { twitter: "#", instagram: "#", linkedin: "https://www.linkedin.com/company/zynspark/" },
   },
   {
     name: "Charan",
     role: "Product designer @Zynspark",
     image: "/images/landingImages/team/Charan.svg",
-    socials: { twitter: "#", instagram: "#", linkedin: "#" },
+    socials: { twitter: "#", instagram: "#", linkedin: "https://www.linkedin.com/company/zynspark/" },
   },
   {
     name: "Rakshit",
     role: "Documentation Researcher",
     image: "/images/landingImages/team/Akshay.svg",
-    socials: { twitter: "#", instagram: "#", linkedin: "#" },
+    socials: { twitter: "#", instagram: "#", linkedin: "https://www.linkedin.com/company/zynspark/" },
   },
 ];
 
@@ -56,7 +56,7 @@ export default function OurTeam() {
   }, []);
 
   return (
-    <section className="py-16 bg-white text-center">
+    <div className="pl-16 bg-white text-center">
       <button className="text-white bg-black py-2 px-4 sm:py-[10px] sm:px-[20px] rounded-xl text-sm sm:text-base">
         Our Team
       </button>
@@ -72,16 +72,31 @@ export default function OurTeam() {
         </p>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4">
+      <div className="relative  mx-auto px-4">
         <Swiper
           modules={[Navigation]}
-          spaceBetween={30}
+          spaceBetween={45}
           navigation={navigation}
-          breakpoints={{
-            640: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-          }}
+        breakpoints={{
+              480: {
+                slidesPerView: 1.3,
+                centeredSlides: false
+              },
+              640: { 
+                slidesPerView: 1.5,
+                centeredSlides: false
+              },
+              768: { 
+                slidesPerView: 3.5,
+                spaceBetween: 15,
+                centeredSlides: false,
+              },
+              1024: { 
+                slidesPerView: 3.5,
+                spaceBetween: 12,
+                centeredSlides: false,
+              },
+            }}
         >
           {teamMembers.map((member, index) => (
             <SwiperSlide key={index}>
@@ -121,6 +136,6 @@ export default function OurTeam() {
           </button>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

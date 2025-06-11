@@ -50,7 +50,7 @@ export const Services = () => {
   }, []);
 
   return (
-    <section className="text-center px-4 sm:px-6 lg:px-8">
+    <div className="text-center px-4 sm:px-6 lg:px-8">
       <button className="text-white bg-black py-2 px-4 sm:py-[10px] sm:px-[20px] rounded-xl mt-4 sm:mt-[30px] text-sm sm:text-base">
         Our Services
       </button>
@@ -65,7 +65,7 @@ export const Services = () => {
         </p>
       </div>
 
-      <div className="py-8 sm:py-10 md:py-12 relative">
+      <div className="py-8 sm:py-10 md:py-12 relative pl-10">
         {swiperReady && (
           <Swiper
             modules={[Navigation]}
@@ -92,12 +92,12 @@ export const Services = () => {
                 centeredSlides: false
               },
               768: { 
-                slidesPerView: 3,
+                slidesPerView: 2.5,
                 spaceBetween: 15,
                 centeredSlides: false,
               },
               1024: { 
-                slidesPerView: 3,
+                slidesPerView: 2.5,
                 spaceBetween: 12,
                 centeredSlides: false,
               },
@@ -130,6 +130,6 @@ export const Services = () => {
           </button>
         </div>
       </div>
-    </section>
+    </div>
   );
 };

@@ -1,22 +1,27 @@
-import React from 'react';
+"use client"
+
+
+import React, { useState } from 'react';
 import SubTestimonials from './SubTestimonial';
 
 const testimonialCategories = [
   'Web Design',
   'App Development',
   'Brand Strategy',
-  'Other',
-  'Marketing',
+  'Pitch Desk',
+  'Digital Marketing',
+  'Cyber Security',
 ];
 
 export const Testimonials = () => {
+  const [selectedCategory, setSelectedCategory] = useState(null);
   const firstLine = testimonialCategories.slice(0, 3);
   const secondLine = testimonialCategories.slice(3);
 
   return (
     <section className="flex px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20 bg-white">
       <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row w-full">
-        {/* Left side - 50% width */}
+        {/* Left side */}
         <div className="w-full md:w-1/1 px-0 sm:px-0 lg:pl-[120px]">
           <div className="text-center sm:text-left mb-6">
             <button className="text-white bg-black py-2 px-4 sm:py-[10px] sm:px-[20px] rounded-xl text-sm sm:text-base">
@@ -38,25 +43,35 @@ export const Testimonials = () => {
               </span>
             </div>
 
-            {/* First line - 3 categories */}
+            {/* First line */}
             <div className="flex flex-wrap justify-center sm:justify-start gap-2.5 mb-4">
               {firstLine.map((category, idx) => (
                 <p
                   key={idx}
-                  className="bg-[#EBE8FF] py-2.5 px-4 rounded-full text-[#892ED3] font-normal text-sm cursor-pointer hover:bg-[#d5d0f5] transition"
+                  onClick={() => setSelectedCategory(category)}
+                  className={`py-2.5 px-4 rounded-full text-sm cursor-pointer transition ${
+                    selectedCategory === category
+                      ? 'bg-[#892ED3] text-white'
+                      : 'bg-[#EBE8FF] text-[#892ED3] hover:bg-[#d5d0f5]'
+                  }`}
                 >
                   {category}
                 </p>
               ))}
             </div>
 
-            {/* Second line - rest of the categories */}
+            {/* Second line */}
             {secondLine.length > 0 && (
               <div className="flex flex-wrap justify-center sm:justify-start gap-2.5">
                 {secondLine.map((category, idx) => (
                   <p
                     key={idx}
-                    className="bg-[#EBE8FF] py-2.5 px-4 rounded-full text-[#892ED3] font-normal text-sm cursor-pointer hover:bg-[#d5d0f5] transition"
+                    onClick={() => setSelectedCategory(category)}
+                    className={`py-2.5 px-4 rounded-full text-sm cursor-pointer transition ${
+                      selectedCategory === category
+                        ? 'bg-[#892ED3] text-white'
+                        : 'bg-[#EBE8FF] text-[#892ED3] hover:bg-[#d5d0f5]'
+                    }`}
                   >
                     {category}
                   </p>
@@ -66,9 +81,9 @@ export const Testimonials = () => {
           </div>
         </div>
 
-        {/* Right side - 50% width */}
+        {/* Right side */}
         <div className="">
-          <SubTestimonials />
+          <SubTestimonials selectedCategory={selectedCategory} />
         </div>
       </div>
     </section>
