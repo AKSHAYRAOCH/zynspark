@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { useState } from 'react';
+import axios from 'axios';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -10,6 +11,8 @@ export default function ContactForm() {
     message: '',
     terms: false,
   });
+  const [error, setError] = useState('');
+  const [success, setSuccess] = useState('');
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -19,10 +22,24 @@ export default function ContactForm() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     console.log(formData);
-    // Integrate with your API here
+    setError('');
+    setSuccess('');
+    try {
+      const response = await axios.post('/api/contactus', {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message
+      });
+
+      if (response.data.success) {
+        setSuccess('Your message was successfully submitted.');
+      }
+    } catch (err) {
+      setError(err.response?.data?.error || 'Something went wrong!');
+    }
   };
 
   return (
@@ -107,6 +124,8 @@ export default function ContactForm() {
             >
               Submit
             </button>
+             {success && <p style={{ color: 'green' }}>{success}</p>}
+             {error && <p style={{ color: 'red' }}>{error}</p>}
           </form>
         </div>
       </div>

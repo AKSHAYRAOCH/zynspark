@@ -1,0 +1,8 @@
+{
+  "schema": "./src/app/db/schema.jsx",
+  "out": "./migrations",
+  "dialect": "postgresql",
+  "dbCredentials": {
+    "url": "process.env.DATABASE_URL"
+  }
+}
