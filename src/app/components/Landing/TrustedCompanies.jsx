@@ -5,17 +5,18 @@ import Logo2 from '../../../../public/images/landingImages/brands/VR LOGO.svg'
 
 export const TrustedCompanies = () => {
   return (
-    <section className='text-center px-4 py-12 md:py-16'>
-      <h1 className='text-[56px] leading-16  sm:text-4xl md:text-5xl lg:text-[56px] mb-8 md:mb-12'>
+    <div className='flex flex-col items-center justify-center px-4 py-12 md:py-16 h-screen'>
+      <h1 className='text-[56px] leading-16 font-medium sm:text-4xl md:text-5xl lg:text-[56px] mb-8 md:mb-20'>
         Trusted Companies
       </h1>
-      <div className='flex flex-wrap justify-center items-center gap-6 sm:gap-8 md:gap-12 max-w-6xl mx-auto'>
+     
+      <div className='flex justify-center flex-wrap items-center gap-6 sm:gap-8 md:gap-12 max-w-6xl mx-auto'>
         <div className='w-32 sm:w-40 md:w-48 lg:w-56 h-auto'>
           <Image 
             src={Logo1} 
             alt='Blumi logo' 
             layout='responsive'
-            width={224} 
+            width={254} 
             height={112}
           />
         </div>
@@ -24,11 +25,11 @@ export const TrustedCompanies = () => {
             src={Logo2} 
             alt='VR logo' 
             layout='responsive'
-            width={224} 
+            width={254} 
             height={112}
           />
         </div>
       </div>
-    </section>
+    </div>
   )
 }

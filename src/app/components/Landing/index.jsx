@@ -11,7 +11,7 @@ import { LetsConnect } from './LetsConnect'
 const Landing = () => {
   return (
     <div>
-          <HeroSection />
+        <HeroSection />
         <TrustedCompanies />
         <Services />
         <Testimonials />

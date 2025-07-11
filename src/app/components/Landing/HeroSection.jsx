@@ -38,7 +38,7 @@ const HeroSection = () => {
 
 
   return (
-    <section className="relative bg-white overflow-hidden h-[90vh] min-h-[600px] md:h-screen border-none outline-none">
+    <section className="relative bg-white overflow-hidden h-[90vh] min-h-[600px] md:h-screen border-none outline-none mt-10">
 
       {/* 🧩 Matter.js Canvas Background */}
       <div className="absolute inset-0 z-0">
@@ -47,13 +47,13 @@ const HeroSection = () => {
 
       {/* 🖼️ Background Decorative Images - Hidden on mobile */}
       <div className="hidden md:block">
-        <div className="absolute top-[60px] left-40 z-0 group">
+        <div className="absolute top-[75px] left-80 z-0 group">
           <Image
             src={Image3}
             alt="decor"
-            width={188}
-            height={170}
-            className="rotate-[-12deg]"
+            width={200}
+            height={180}
+            className="rotate-[-3deg]"
           />
           <Image
             src={Arrow}
@@ -64,13 +64,13 @@ const HeroSection = () => {
           />
         </div>
 
-        <div className="absolute top-[70px] right-40 z-0 group">
+        <div className="absolute top-[50px] right-80 z-0 group">
           <Image
             src={Image2}
             alt="decor"
-            width={188}
-            height={170}
-            className="rotate-[-12deg]"
+            width={200}
+            height={180}
+            className="rotate-[-2deg]"
           />
           <Image
             src={Arrow}
@@ -82,13 +82,13 @@ const HeroSection = () => {
           />
         </div>
 
-        <div className="absolute bottom-[180px] left-0 z-0 group">
+        <div className="absolute bottom-[180px] left-25 z-0 group">
           <Image
             src={Image4}
             alt="decor"
             width={188}
             height={170}
-            className="rotate-[8deg]"
+            className="rotate-[3deg]"
           />
           <Image
             src={Arrow}
@@ -100,13 +100,13 @@ const HeroSection = () => {
           />
         </div>
 
-        <div className="absolute bottom-[200px] right-0 z-0 group">
+        <div className="absolute bottom-[130px] right-15 z-0 group">
           <Image
             src={Image1}
             alt="decor"
             width={188}
             height={170}
-            className="rotate-[30deg]"
+            className="rotate-[2deg]"
           />
           <Image
             src={Arrow}
@@ -119,9 +119,9 @@ const HeroSection = () => {
       </div>
 
       {/* 🌟 Main Hero Content */}
-      <div className="relative z-20 mt-[60px] md:mt-[150px] px-4">
+      <div className="relative z-20 mt-[60px] md:mt-[200px] px-4 font-sans">
         <div className="flex justify-center items-center gap-2 md:gap-[10px]">
-          <h1 className="text-[32px] sm:text-5xl md:text-[80px] leading-[1.2] md:leading-[96px] font-semibold text-center">
+          <h1 className="text-[32px] sm:text-5xl md:text-[80px] leading-[1.2] md:leading-[96px] font-medium text-center">
             End-to-End Support for:
             <br className="hidden sm:block" />
             {hasMounted && (
@@ -142,17 +142,14 @@ const HeroSection = () => {
           </h1>
         </div>
 
-        <div className="flex justify-center items-center px-2 sm:px-0 pt-25">
-          <h2 className="text-center mt-4 md:mt-[20px] text-sm sm:text-base md:text-lg max-w-[500px] mx-auto">
+        <div className="flex justify-center mt-4 md:mt-[30px] items-center font-sans px-2 sm:px-0 pt-25">
+          <h2 className="text-center text-sm md:text-[18px] mx-auto">
             Zynspark blends creativity and strategy to help your brand grow.
           </h2>
         </div>
 
-        <div className="flex justify-center items-center mt-6 sm:mt-[30px]">
-          <Link
-            href="/contact"
-            className="text-white bg-[#A270FF] hover:bg-[#8a5ceb] py-3 px-6 sm:py-[10px] sm:px-[20px] rounded-xl text-sm sm:text-base inline-block text-center transition-colors duration-200"
-          >
+        <div className="flex justify-center items-center mt-6 p-8 md:mt-[15px] text-md sm:text-lg">
+          <Link href="/contact" className="text-white bg-[#A270FF] hover:bg-[#8a5ceb] py-3 px-6 sm:py-[20px] sm:px-[40px] rounded-xl inline-block text-center transition-colors duration-200">
             Contact Us
           </Link>
         </div>
