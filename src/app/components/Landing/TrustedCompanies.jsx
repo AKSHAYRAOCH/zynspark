@@ -6,7 +6,7 @@ import Logo2 from '../../../../public/images/landingImages/brands/VR LOGO.svg'
 export const TrustedCompanies = () => {
   return (
     <div className='flex flex-col items-center justify-center px-4 py-12 md:py-16 h-screen'>
-      <h1 className='text-[56px] leading-16 font-medium sm:text-4xl md:text-5xl lg:text-[56px] mb-8 md:mb-20'>
+      <h1 className='text-[46px] md:text-[56px] leading-16 font-medium mb-8 md:mb-20'>
         Trusted Companies
       </h1>
      

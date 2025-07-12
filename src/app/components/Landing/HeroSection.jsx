@@ -47,7 +47,7 @@ const HeroSection = () => {
 
       {/* 🖼️ Background Decorative Images - Hidden on mobile */}
       <div className="hidden md:block">
-        <div className="absolute top-[75px] left-80 z-0 group">
+        <div className="top-[75px] left-20 md:left-40 lg:left-80 absolute z-0 group">
           <Image
             src={Image3}
             alt="decor"
@@ -64,7 +64,7 @@ const HeroSection = () => {
           />
         </div>
 
-        <div className="absolute top-[50px] right-80 z-0 group">
+        <div className="absolute top-[50px] right-20 md:right-40 lg:right-80 z-0 group">
           <Image
             src={Image2}
             alt="decor"
@@ -119,9 +119,9 @@ const HeroSection = () => {
       </div>
 
       {/* 🌟 Main Hero Content */}
-      <div className="relative z-20 mt-[60px] md:mt-[200px] px-4 font-sans">
-        <div className="flex justify-center items-center gap-2 md:gap-[10px]">
-          <h1 className="text-[32px] sm:text-5xl md:text-[80px] leading-[1.2] md:leading-[96px] font-medium text-center">
+      <div className="relative z-20 mt-[60px] md:mt-[200px] px-4">
+        <div className="flex justify-center items-center gap-[10px]">
+          <h1 className="text-[45px] md:text-[60px] lg:text-[75px] leading-[1.2] md:leading-[96px] font-[520] text-center">
             End-to-End Support for:
             <br className="hidden sm:block" />
             {hasMounted && (
@@ -132,7 +132,7 @@ const HeroSection = () => {
                   animate={{ y: "0%", opacity: 1 }}
                   exit={{ y: "-100%", opacity: 0 }}
                   transition={{ duration: 0.4 }}
-                  className="absolute top-0 left-0 w-full text-center text-[#A270FF] md:my-25 my-20" 
+                  className="absolute top-0 left-0 w-full text-center text-[#A270FF] my-35 md:my-25 " 
                 >
                   {keywords[currentKeyword]}
                 </motion.span>
@@ -142,13 +142,13 @@ const HeroSection = () => {
           </h1>
         </div>
 
-        <div className="flex justify-center mt-4 md:mt-[30px] items-center font-sans px-2 sm:px-0 pt-25">
+        <div className="flex justify-center mt-[35px] md:mt-[30px] items-center font-sans px-2 sm:px-0 pt-25">
           <h2 className="text-center text-sm md:text-[18px] mx-auto">
             Zynspark blends creativity and strategy to help your brand grow.
           </h2>
         </div>
 
-        <div className="flex justify-center items-center mt-6 p-8 md:mt-[15px] text-md sm:text-lg">
+        <div className="flex justify-center items-center mt-6 p-8 md:mt-[15px] text-md sm:text-xl">
           <Link href="/contact" className="text-white bg-[#A270FF] hover:bg-[#8a5ceb] py-3 px-6 sm:py-[20px] sm:px-[40px] rounded-xl inline-block text-center transition-colors duration-200">
             Contact Us
           </Link>
