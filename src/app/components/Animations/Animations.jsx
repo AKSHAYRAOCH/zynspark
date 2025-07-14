@@ -17,17 +17,17 @@ const labels = [
 ];
 
 const colors = [
-  "#d8c0ff",
-  "#FF0000",
-  "#eaeaea",
-  "#ffc29f",
-  "#ffe3d3",
-  "#a7ff9f",
-  "#c3f2d1",
-  "#a7ff9f",
-  "#dbefe8",
-  "#8330c2",
-  "#010102",
+  "#d8c0ff",   //	Pale Lavender 
+  "#d8c0ff",   //	Pale Lavender 
+  "#eaeaea",   //	Very Light Gray
+  "#ffc29f", //  Light Orange
+  "#ffe3d3",  //  Light Peach
+  "#a7ff9f", //  Light Green
+  "#c3f2d1", //  Light Mint
+  "#a7ff9f", //  Light Green
+  "#dbefe8",  //  Light Aqua
+  "#8330c2", // Dark Purple
+  "#010102", // Very Dark Gray
 ];
 
 const MatterScene = () => {
@@ -128,7 +128,7 @@ const MatterScene = () => {
       const y = Math.random() * (height - 100) + 52;
       const color = colors[index % colors.length];
 
-      const body = Matter.Bodies.rectangle(x, y, 192, 50, {
+      const body = Matter.Bodies.rectangle(x, y, 170, 50, {
         restitution: 0.9,
         chamfer: { radius: 11 },
         render: {
@@ -149,6 +149,7 @@ const MatterScene = () => {
     Matter.World.add(world, bodies);
 
     const mouse = Matter.Mouse.create(render.canvas);
+
     const mouseConstraint = Matter.MouseConstraint.create(engine, {
       mouse,
       constraint: {
@@ -157,12 +158,28 @@ const MatterScene = () => {
       },
     });
 
+    // assume you have: render and mouseConstraint already created
+
+let scrollTimeout;
+const canvas = render.canvas;
+
+// disable canvas interaction while scrolling
+canvas.addEventListener("wheel", () => {
+  canvas.style.pointerEvents = "none";
+  clearTimeout(scrollTimeout);
+  scrollTimeout = setTimeout(() => {
+    canvas.style.pointerEvents = "auto";
+  }, 150);  // ~150 ms after scroll stops
+}, { passive: true });
+
+
+
     Matter.World.add(world, mouseConstraint);
     render.mouse = mouse;
 
     Matter.Events.on(render, "afterRender", () => {
       const ctx = render.context;
-      ctx.font = "18px Inter";
+      ctx.font = "18px DM Sans, sans-serif";
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
 
@@ -211,7 +228,15 @@ const MatterScene = () => {
     <div
       ref={sceneRef}
       className="w-full h-screen relative"
-      style={{ background: "transparent", overflow: "hidden" }}
+      style={{
+        top: 0,
+        left: 0,
+        width: "100vw",
+        height: "100vh",
+        background: "transparent",
+        zIndex: 0,           // below your UI
+        pointerEvents: "auto", // allow interaction
+         }}
     />
   );
 };

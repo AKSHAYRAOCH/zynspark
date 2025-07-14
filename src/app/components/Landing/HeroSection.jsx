@@ -132,7 +132,7 @@ const HeroSection = () => {
                   animate={{ y: "0%", opacity: 1 }}
                   exit={{ y: "-100%", opacity: 0 }}
                   transition={{ duration: 0.4 }}
-                  className="absolute top-0 left-0 w-full text-center text-[#A270FF] my-35 md:my-25 " 
+                  className="absolute top-0 left-0 w-full text-center text-[#A270FF] my-30 md:my-25 " 
                 >
                   {keywords[currentKeyword]}
                 </motion.span>
@@ -148,7 +148,7 @@ const HeroSection = () => {
           </h2>
         </div>
 
-        <div className="flex justify-center items-center mt-6 p-8 md:mt-[15px] text-md sm:text-xl">
+        <div className="flex justify-center items-center p-8  mt-[15px] text-md sm:text-xl">
           <Link href="/contact" className="text-white bg-[#A270FF] hover:bg-[#8a5ceb] py-3 px-6 sm:py-[20px] sm:px-[40px] rounded-xl inline-block text-center transition-colors duration-200">
             Contact Us
           </Link>
