@@ -227,7 +227,7 @@ canvas.addEventListener("wheel", () => {
   return (
     <div
       ref={sceneRef}
-      className="w-full h-screen relative"
+      className="w-full h-full relative"
       style={{
         top: 0,
         left: 0,
