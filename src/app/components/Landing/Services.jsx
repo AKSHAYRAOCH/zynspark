@@ -58,11 +58,11 @@ export const Services = () => {
       <div className="w-full md:w-1/2 lg:w-2/3 xl:w-[45%] mx-auto flex flex-col gap-4 sm:gap-6 md:gap-8 text-center pt-6 sm:pt-8">
         <h2 className="text-[30px] md:text-[56px] font-[600] leading-snug ">
           What We Do - Crafted 
-          <br/>for Your Success
+          <br/> for Your Success
         </h2>
         <p className="text-[12px] md:text-[18px] font-normal desktop-br leading-6 sm:leading-7  text-gray-600">
           From SEO and branding to web design and content, Zynspark crafts
-          <br/>strategies that deliver real results. Let's bring your vision to life.
+          <br/> strategies that deliver real results. Let's bring your vision to life.
         </p>
       </div>
 

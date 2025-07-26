@@ -38,7 +38,7 @@ const HeroSection = () => {
 
 
   return (
-    <section className="relative bg-white overflow-hidden h-[90vh] min-h-[600px] md:h-screen border-none outline-none mt-10">
+    <section className="relative bg-white overflow-hidden min-h-[600px] h-screen border-none outline-none mt-10">
 
       {/* 🧩 Matter.js Canvas Background */}
       <div className="absolute inset-0 z-0">

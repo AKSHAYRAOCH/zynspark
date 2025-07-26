@@ -98,13 +98,13 @@ const Star = ({ filled }) => (
 );
 
 const TestimonialCard = ({ name, position, image, stars, text }) => (
-  <div className="rounded-2xl border border-gray-200 p-4 md:p-6 shadow-sm bg-white w-full max-w-xs md:max-w-sm">
-    <div className="flex mb-2 md:mb-3">
+  <div className="rounded-4xl border border-gray-200 p-4 md:p-6 shadow-sm bg-white w-full max-w-xs md:max-w-sm">
+    <div className="flex ">
       {[...Array(5)].map((_, i) => (
         <Star key={i} filled={i < stars} />
       ))}
     </div>
-    <p className="text-xs md:text-sm text-gray-700 mb-3 md:mb-4">"{text}"</p>
+    <p className="text-sm md:text-lg mb-3 md:mb-4">"{text}"</p>
     <div className="flex items-center gap-2 md:gap-3">
       <Image
         src={image}
@@ -140,16 +140,16 @@ const SubTestimonials = ({ selectedCategory }) => {
         </div>
   
         {/* Desktop View */}
-        <div className="hidden md:flex gap-4 lg:gap-10 px-4 lg:px-8 py-8">
-          <div className="w-[235px] lg:max-w-[300px] h-[500px] overflow-y-auto hide-scrollbar">
-            <div className="grid grid-cols-1 gap-6 lg:gap-8">
+        <div className="hidden md:flex gap-4 px-4 lg:px-8 py-8">
+          <div className="w-[352px] h-[800px]  overflow-y-auto hide-scrollbar">
+            <div className="grid grid-cols-1 gap-4">
               {filteredTestimonials.slice(0, Math.ceil(filteredTestimonials.length / 2)).map((t, index) => (
                 <TestimonialCard key={index} {...t} />
               ))}
             </div>
           </div>
-          <div className="w-[235px] lg:max-w-[300px] h-[700px] overflow-y-auto hide-scrollbar">
-            <div className="grid grid-cols-1 gap-6 lg:gap-8">
+          <div className="w-[352px] h-[500px] overflow-y-auto hide-scrollbar">
+            <div className="grid grid-cols-1 gap-4">
               {filteredTestimonials.slice(Math.ceil(filteredTestimonials.length / 2)).map((t, index) => (
                 <TestimonialCard key={index} {...t} />
               ))}
