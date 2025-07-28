@@ -53,125 +53,118 @@ export default function OurProjects() {
       </div>
 
       {/* Project Showcase */}
-      <div className="border-2 border-[#1B1A1C14] p-2 sm:p-4 rounded-3xl md:rounded-4xl">
-        
-      <div className="bg-white relative rounded-xl md:rounded-2xl shadow-md p-4 sm:p-6 md:p-10 flex flex-col lg:flex-row justify-between items-center gap-6 md:gap-10 mx-auto">
-  {/* Left Card */}
-  <div className="border-2 border-[#1B1A1C14] py-6 px-4 sm:py-8 sm:px-8 md:py-10 md:px-16 rounded-xl md:rounded-2xl w-full lg:w-1/2 relative z-10 bg-white">
- 
-    <div className="flex-1">
-      {/* Avatar Icons */}
-     
-      <div className="flex gap-2 sm:gap-4 justify-between mb-4 md:mb-6 border border-gray-200 rounded-[8vw] h-[5.5vw] pl-4 pr-4 pt-0.5 pb-4 w-48 ml-48">
-        {projectData.map((project, idx) => (
-          <div
-            key={idx}
-            className={`cursor-pointer transition-transform duration-300 ${
-              selectedProject.name === project.name
-                ? "scale-110 text-[14px]"
-                : "border-purple-200"
-            }`}
-            onClick={() => setSelectedProject(project)}
-          >
-            <Image
-              src={project.avatar}
-              alt={project.name}
-              width={49}
-              height={49}
-              className={`w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mt-3 transition-shadow duration-300 ${
-              selectedProject.name === project.name
-              ? "drop-shadow-lg"
-              : "opacity-70"
-              }`}  
-            />
-            <span className="text-xs sm:text-[14px] font-extralight">{project.name}</span>
-          </div>
-        ))}
-        
-      </div>
+      <div className="flex justify-center">
+        <div className=" border-2 border-[#1B1A1C14] p-2 sm:p-4 rounded-3xl md:rounded-4xl w-[1680px]">
+          <div className="bg-white relative rounded-xl md:rounded-2xl shadow-md p-4 sm:p-6 md:p-10 flex flex-col lg:flex-row justify-between items-center gap-6 md:gap-10 mx-auto">
 
-      <div className="mb-3 md:mb-4 text-center">
-        <Image
-          src={selectedProject.avatar}
-          alt={selectedProject.name}
-          width={89}
-          height={89}
-          className="mx-auto w-12 h-12 md:w-[89px] md:h-[89px]"
-        />
-        <h3 className="text-xl md:text-[40px] font-bold mt-2">
-          {selectedProject.name}
-        </h3>
-        <span className="text-xs md:text-[15px] text-[#892ED3] bg-[#892ED314] rounded-full px-3 py-1 md:px-[24px] md:py-[8px] inline-block mt-2">
-          {selectedProject.tag}
-        </span>
-      </div>
+          {/* Left Card */}
+            <div className="border-2 border-[#1B1A1C14] py-6 px-4 sm:py-8 sm:px-8 md:py-10 md:px-16 rounded-xl md:rounded-2xl w-full lg:w-1/2 relative z-10 bg-white">
 
-      {/* Stars */}
-      <div className="flex justify-center gap-1 my-2 md:my-3">
-        {Array(5)
-          .fill(0)
-          .map((_, idx) => (
-            <span key={idx} className="text-yellow-400 text-lg md:text-[36px]">
-              ★
-            </span>
-          ))}
-      </div>
+              <div className="flex-1">
 
-      {/* Description */}
-      <p className="text-[18px] text-gray-600 max-w-xs md:max-w-[26vw] mx-auto font-extralight text-center">
-        {selectedProject.description}
-      </p>
+              {/* Avatar Icons */}
+              <div className="flex gap-2 sm:gap-4 justify-between mb-4 md:mb-6 border border-gray-200 rounded-[8vw] h-[5.5vw] pl-4 pr-4 pt-0.5 pb-4 w-48 ml-48">
+                {projectData.map((project, idx) => (
+                  <div key={idx} className={`cursor-pointer transition-transform duration-300 ${
+                    selectedProject.name === project.name
+                    ? "scale-110 text-[14px]"
+                    : "border-purple-200" }`} onClick={() => setSelectedProject(project)}>
+                    <Image src={project.avatar} alt={project.name} width={49} height={49} className={`w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mt-3 transition-shadow duration-300 ${
+                    selectedProject.name === project.name
+                    ? "drop-shadow-lg"
+                    : "opacity-70" }`}/>
+                    <span className="text-xs sm:text-[14px] font-extralight">{project.name}</span>
+                  </div> ))}
+              </div>
+              <div className="mb-3 md:mb-4 text-center">
+                <Image src={selectedProject.avatar} alt={selectedProject.name} width={89} height={89} className="mx-auto w-12 h-12 md:w-[89px] md:h-[89px]" />
+                <h3 className="text-xl md:text-[40px] font-bold mt-2"> {selectedProject.name} </h3>
+                <span className="text-xs md:text-[15px] text-[#892ED3] bg-[#892ED314] rounded-full px-3 py-1 md:px-[24px] md:py-[8px] inline-block mt-2">{selectedProject.tag}</span>
+              </div>
+
+            {/* Stars */}
+            <div className="flex justify-center gap-1 my-2 md:my-3"> {Array(5).fill(0).map((_, idx) => (
+              <span key={idx} className="text-yellow-400 text-lg md:text-[36px]">
+                ★
+              </span> ))}
+            </div>
+
+            {/* Description */}
+            <p className="text-[18px] text-gray-600 max-w-xs md:max-w-[26vw] mx-auto font-extralight text-center">
+              {selectedProject.description}
+            </p>
+         </div>
+       </div>
+      <Image src={Arrow} width={100} height={100} alt="Arrow" className="hidden lg:block relative right-0"/>
+      {/* Project Image */}
+      <div className="relative w-full lg:w-1/2 h-64 sm:h-80 md:h-96 lg:h-[500px]">
+        <Image src={selectedProject.projectImage} width={700}  height={700} alt="Project Screenshot"  className="object-contain" />
+      </div>
     </div>
-  </div>
-  <Image src={Arrow} width={100} height={100} alt="Arrow" className="hidden lg:block relative right-0"/>
-  {/* Project Image */}
-  <div className="relative w-full lg:w-1/2 h-64 sm:h-80 md:h-96 lg:h-[500px]">
-    <Image
-      src={selectedProject.projectImage}
-      width={2000}
-      height={2000}
-      alt="Project Screenshot"
-      className="object-contain"
-    />
-  </div>
-</div>
 
-<div ref={ref} className="bg-white rounded-xl md:rounded-2xl shadow-md mt-6 md:mt-6 py-6 px-4 md:py-10 md:px-6 mx-auto">
-  <span className="text-xs md:text-sm text-black bg-[#722CFF14] px-3 py-2 md:px-8 md:py-4 font-medium ">
+<div ref={ref} className="bg-white h-[290px] w-[1632px] rounded-xl md:rounded-4xl shadow-md mt-6 md:mt-6 py-6 px-4 md:py-16 md:px-6 mx-auto">
+  <span className="text-xs md:text-2xl text-black bg-[#722CFF14] px-3 py-2 md:px-4 md:py-3 font-[500] rounded-xl">
     Our Achievements 🥳
   </span>
 
       <div className="flex flex-col sm:flex-row justify-around items-center mt-4 md:mt-14 gap-4 sm:gap-6 md:gap-10">
         <div className="text-center">
-          <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
+          <h3 className="text-2xl md:text-[32px] font-bold text-gray-900">
             <CountUp key={`${countKey}-clients`} end={10} duration={6} />+
           </h3>
-          <p className="text-sm md:text-base text-[#00000099] mt-1">Repeated clients</p>
+          <p className="text-sm md:text-[18px] font-light text-[#00000099]  mt-1">Repeated clients</p>
         </div>
 
-        <div className="flex gap-6">
-          <div className="md:w-16 md:h-16 mx-auto bg-gradient-to-tr from-purple-400 to-pink-300 rounded-full 
-          flex items-center justify-center
-           text-white text-base md:text-lg font-semibold" />
+        <div className="flex gap-6 ">
+        {/* progress circle */}
+        <svg className="w-[95px] h-[95px] -rotate-90" viewBox="0 0 75 75" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="progressGradient" x1="80%" y1="70%" x2="20%" y2="100%">
+      <stop offset="53%" stopColor="#E9A0FF" />
+      <stop offset="100%" stopColor="#FFA0A2" />
+    </linearGradient>
+  </defs>
+  
+  <circle cx="37.5" cy="37.5" r="33.5" fill="none" stroke="#e5e7eb" strokeWidth="8"></circle>
+  
+  <circle cx="37.5" cy="37.5" r="33.5" fill="none" stroke="url(#progressGradient)" strokeWidth="8" strokeDasharray="210" strokeDashoffset="210" strokeLinecap="round">
+    <animate attributeName="stroke-dashoffset" 
+             values="210;52.5" 
+             dur="2s" 
+             fill="freeze" 
+             calcMode="spline" 
+             keySplines="0.4 0 0.2 1" 
+             keyTimes="0;1" />
+  </circle>
+</svg>
 
-          <div className="flex flex-col items-start">
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
+
+
+          <div className="flex flex-col items-start pt-2 ">
+            <h3 className="text-2xl md:text-[32px] font-bold text-gray-900 ">
               <CountUp key={`${countKey}-projects`} end={20} duration={2} />+
             </h3>
-            <p className="text-sm md:text-base text-[#00000099] mt-1">No of Projects</p>
+            <p className="text-sm md:text-[18px] font-light text-[#00000099] mt-1 ">No of Projects</p>
           </div>
+          
         </div>
+        
  
  
         <div className="text-center">
-          <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
+          <h3 className="text-2xl md:text-[32px] font-bold text-gray-900">
             <CountUp key={`${countKey}-partners`} end={5} duration={8} />+
           </h3>
-          <p className="text-sm md:text-base text-[#00000099] mt-1">Partnership</p>
+          <p className="text-sm md:text-[18px] font-light text-[#00000099] mt-1">Partnership</p>
         </div>
       </div>
     </div>
       </div>
+      </div>
+
     </section>
   );
 }
+
+
+

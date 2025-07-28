@@ -56,26 +56,26 @@ export default function OurTeam() {
   }, []);
 
   return (
-    <div className="pl-16 bg-white text-center">
-      <button className="text-white bg-black py-2 px-4 sm:py-[10px] sm:px-[20px] rounded-xl text-sm sm:text-base">
+    <div className="pl-16 bg-white text-center h-screen">
+      <button className="text-white bg-black py-[12px] px-[11px] rounded-xl text-md md:py-[16px] md:px-[16px] md:rounded-xl md:text-xl font-medium">
         Our Team
       </button>
 
       <div className="flex flex-col items-center justify-center text-center">
-        <h2 className="text-[56px] leading-[67px] font-semibold mb-6 pt-10">
+        <h2 className="text-[56px] leading-[67px] font-[600] mb-6 pt-8">
           Meet the Team Behind the Magic
         </h2>
-        <p className="text-gray-700 mb-8 text-lg leading-[27px] w-[60%] mx-auto">
+        <p className="text-gray-700 mb-16  px-30 text-[10px] md:text-[18px] leading-[27px] w-[60%] ">
           At Zynspark, we're a group of creative thinkers, strategists, and
           problem-solvers. Together, we combine our expertise and passion to
           bring your ideas to life and make your brand shine.
         </p>
       </div>
 
-      <div className="relative  mx-auto px-4">
+      <div className="relative mx-auto px-4">
         <Swiper
           modules={[Navigation]}
-          spaceBetween={45}
+          spaceBetween={400}
           navigation={navigation}
         breakpoints={{
               480: {
@@ -100,25 +100,19 @@ export default function OurTeam() {
         >
           {teamMembers.map((member, index) => (
             <SwiperSlide key={index}>
-              <div className="border  border-none p-10 rounded-2xl shadow-sm hover:shadow-lg transition bg-[#F4F4F4]">
+              <div className="border border-none rounded-4xl h-[588px] w-[537.19px] shadow-sm hover:shadow-lg transition bg-[#F4F4F4]">
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-[200px] h-[200px] rounded-full mx-auto mb-8 object-cover"
+                  className="w-[232px] h-[232px] rounded-full mx-auto mb-8 object-cover"
                 />
-                <h4 className="text-[40px] leading-[50px] font-bold text-black">
+                <h4 className="text-[50.81px] leading-[50px] font-bold text-black">
                   {member.name}
                 </h4>
-                <p className="text-gray-600 mb-4 text-[20px] leading-[36px]">
+                <p className="text-gray-600 mb-4 text-[25.41px] leading-[36px]">
                   {member.role}
                 </p>
                 <div className="flex justify-center space-x-6 text-black">
-                  <a href={member.socials.twitter} target="_blank" rel="noreferrer">
-                    <FaTwitter className="w-[29px] h-[29px]" />
-                  </a>
-                  <a href={member.socials.reddit} target="_blank" rel="noreferrer">
-                    <FaReddit className="w-[29px] h-[29px]" />
-                  </a>
                   <a href={member.socials.linkedin} target="_blank" rel="noreferrer">
                     <FaLinkedin className="w-[29px] h-[29px]" />
                   </a>
