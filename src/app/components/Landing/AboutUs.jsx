@@ -7,7 +7,7 @@ import AboutLine from '../../../../public/images/landingImages/About.svg';
 
 export default function AboutUs() {
   return (
-    <section className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-50 h-screen m-4 mb:m-20">
+    <section className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-50 bg-white h-screen m-4 mb:m-20">
       
       {/* Floating animated image */}
       <motion.div

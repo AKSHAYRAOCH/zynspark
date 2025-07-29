@@ -10,7 +10,7 @@ import { LetsConnect } from './LetsConnect'
 
 const Landing = () => {
   return (
-    <div>
+    <div className='h-full w-full overflow-hidden'>
         <HeroSection />
         <TrustedCompanies />
         <Services />
@@ -18,7 +18,9 @@ const Landing = () => {
         <OurProjects />
         <AboutUs />
         <OurTeam />
-        <LetsConnect />
+        <div data-component="LetsConnect">
+          <LetsConnect />
+        </div>
     </div>
   )
 }

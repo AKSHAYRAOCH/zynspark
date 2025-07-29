@@ -22,13 +22,13 @@ export default function IndustriesSection() {
   }, []);
 
   return (
-    <section className="bg-[#f7f7f7] py-12 md:py-20 px-4 sm:px-6">
+    <section className="bg-[#f7f7f7] py-12 md:py-20 px-4 sm:px-6 h-screen">
       <div className="max-w-6xl mx-auto text-center">
-        <button className="text-white bg-black py-2 px-4 sm:py-[10px] sm:px-[20px] rounded-xl text-sm sm:text-base">
+        <button className="text-white bg-black py-2 px-4 md:px-[16px] md:py-[12px] rounded-xl text-sm sm:text-[20px]">
           Industries
         </button>
 
-        <h2 className="text-3xl sm:text-4xl font-bold my-4 sm:my-6 flex justify-center items-center gap-2 flex-wrap">
+        <h2 className="text-3xl sm:text-[56px] font-bold my-4 sm:my-6 flex justify-center items-center gap-2 flex-wrap">
           We work across{' '}
           <span className="relative h-[40px] w-[100px] sm:w-[120px] inline-block">
             <AnimatePresence mode="wait">

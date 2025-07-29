@@ -16,7 +16,7 @@ export const LetsConnect = () => {
         
         <Link
           href="/contact"
-          className="text-white bg-[#A270FF] hover:bg-[#8a5ceb] py-3 px-6 md:py-[10px] md:px-[20px] rounded-xl mt-6 md:mt-[30px] text-base md:text-base inline-block text-center transition-colors duration-200"
+          className="text-white bg-[#A270FF] text-[18px] hover:bg-[#8a5ceb] py-3 px-6 md:py-[20px] md:px-[40px] rounded-xl mt-6 md:mt-[30px] inline-block text-center transition-colors duration-200"
         >
           Contact Us
         </Link>

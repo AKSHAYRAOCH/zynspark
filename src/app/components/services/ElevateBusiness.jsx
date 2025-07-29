@@ -4,10 +4,10 @@ import { IoIosSearch } from "react-icons/io";
 import { CgWebsite } from "react-icons/cg";
 
 const services = [
-  { icon: <CgWebsite size={36} />, title: 'Web Development' },
-  { icon: <FaPaintBrush size={36} />, title: 'Web Design' },
+  { icon: <CgWebsite size={36} />, title: 'Web Design' },
+  { icon: <FaPaintBrush size={36} />, title: 'Web Development' },
   { icon: <FaFileAlt size={36} />, title: 'Branding' },
-  { icon: <FaBullhorn size={36} />, title: 'Social Media Marketing' },
+  { icon: <FaBullhorn size={36} />, title: 'Social-Media Marketing' },
   { icon: <FaPencilAlt size={36} />, title: 'Content Writing' },
   { icon: <FaThLarge size={36} />, title: 'Product Design' },
   { icon: <IoIosSearch size={36} />, title: 'SEO Services' },
@@ -20,15 +20,15 @@ export default function ElevateBusiness() {
   const secondRow = services.slice(5);
 
   return (
-    <section className="bg-white py-12 md:py-20 px-4 sm:px-6">
-      <div className="max-w-6xl mx-auto text-center">
-        <button className="text-white bg-black py-2 px-4 rounded-xl mt-4 text-sm md:text-base">
-          Our Services
+    <section className=" bg-white py-12 md:py-20 px-4 sm:px-6 h-screen mt-44 mb-16 ">
+      <div className="max-w-6xl mx-auto text-center ">
+        <button className="text-white bg-black px-[16px] py-[12px] rounded-xl  text-sm md:text-[20px]">
+          Our Services 
         </button>
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold mt-4 sm:mt-6">
+        <h1 className="text-2xl sm:text-3xl md:text-[56px] font-semibold mt-4 sm:mt-6">
           Services Designed to <br /> Elevate Your Business
         </h1>
-        <p className="text-[#000000B2] mt-3 sm:mt-4 text-sm sm:text-base leading-6 sm:leading-8 font-normal max-w-2xl mx-auto">
+        <p className="text-[#000000B2] mt-3 sm:mt-4 text-sm sm:text-[18px] leading-6 sm:leading-8 font-[400px] mx-auto">
           Our services drive growth, engagement, and lasting impact with tailored solutions that exceed expectations.
         </p>
 
@@ -37,11 +37,11 @@ export default function ElevateBusiness() {
           {firstRow.map((service, index) => (
             <div
               key={index}
-              className="bg-[#892ED314] text-[#892ED3] rounded-lg w-full max-w-[140px] h-[140px] sm:w-[150px] sm:h-[150px] md:w-[162px] md:h-[162px] p-4 sm:p-6
+              className="bg-[#892ED314] text-[#892ED3] rounded-lg w-full max-w-[140px] h-[140px] sm:w-[150px] sm:h-[150px] md:w-[162px] md:h-[162px] p-2
               flex flex-col items-center justify-center text-center"
             >
-              <div className="mb-2">{service.icon}</div>
-              <span className="text-xs sm:text-sm font-medium">{service.title}</span>
+              <div className="mb-2 w-[48px] h-[48px] ">{service.icon}</div>
+              <span className="text-xs sm:text-[18px] font-[400px]">{service.title}</span>
             </div>
           ))}
         </div>
@@ -51,11 +51,11 @@ export default function ElevateBusiness() {
           {secondRow.map((service, index) => (
             <div
               key={index + 5}
-              className="bg-[#892ED314] text-[#892ED3] rounded-lg w-full max-w-[140px] h-[140px] sm:w-[150px] sm:h-[150px] md:w-[162px] md:h-[162px] p-4 sm:p-6
+              className="bg-[#892ED314] text-[#892ED3] rounded-lg w-full max-w-[140px] h-[140px] sm:w-[150px] sm:h-[150px] md:w-[162px] md:h-[162px] p-2
               flex flex-col items-center justify-center text-center"
             >
-              <div className="mb-2">{service.icon}</div>
-              <span className="text-xs sm:text-sm font-medium">{service.title}</span>
+              <div className="mb-2 w-[48px] h-[48px]">{service.icon}</div>
+              <span className="text-xs sm:text-[18px] font-[400px]">{service.title}</span>
             </div>
           ))}
         </div>

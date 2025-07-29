@@ -5,9 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-
-import {  FaTwitter, FaLinkedin } from "react-icons/fa";
-import { FaReddit } from "react-icons/fa";
+import {  FaLinkedin } from "react-icons/fa";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const teamMembers = [
@@ -56,65 +54,67 @@ export default function OurTeam() {
   }, []);
 
   return (
-    <div className="pl-16 bg-white text-center h-screen">
+    <div className="pl-16 bg-white text-center">
       <button className="text-white bg-black py-[12px] px-[11px] rounded-xl text-md md:py-[16px] md:px-[16px] md:rounded-xl md:text-xl font-medium">
         Our Team
       </button>
 
       <div className="flex flex-col items-center justify-center text-center">
-        <h2 className="text-[56px] leading-[67px] font-[600] mb-6 pt-8">
+        <h2 className="text-[15px] md:text-[56px] leading-[67px] font-[600] mb-6 pt-8">
           Meet the Team Behind the Magic
         </h2>
-        <p className="text-gray-700 mb-16  px-30 text-[10px] md:text-[18px] leading-[27px] w-[60%] ">
+        <p className="text-gray-700 mb-16 font-[400] px-0 md:px-30 text-[10px] md:text-[18px] leading-[27px] w-[90%] md:w-[60%] ">
           At Zynspark, we're a group of creative thinkers, strategists, and
           problem-solvers. Together, we combine our expertise and passion to
           bring your ideas to life and make your brand shine.
         </p>
       </div>
 
-      <div className="relative mx-auto px-4">
+      <div className="relative">
         <Swiper
           modules={[Navigation]}
-          spaceBetween={400}
+          
           navigation={navigation}
         breakpoints={{
               480: {
                 slidesPerView: 1.3,
-                centeredSlides: false
+                centeredSlides: false,
+                spaceBetween: 10,
               },
               640: { 
                 slidesPerView: 1.5,
-                centeredSlides: false
+                centeredSlides: false,
+                spaceBetween: 20,
               },
               768: { 
                 slidesPerView: 3.5,
-                spaceBetween: 15,
+                spaceBetween: 70,
                 centeredSlides: false,
               },
               1024: { 
                 slidesPerView: 3.5,
-                spaceBetween: 12,
+                spaceBetween: 250,
                 centeredSlides: false,
               },
             }}
         >
           {teamMembers.map((member, index) => (
-            <SwiperSlide key={index}>
-              <div className="border border-none rounded-4xl h-[588px] w-[537.19px] shadow-sm hover:shadow-lg transition bg-[#F4F4F4]">
+            <SwiperSlide key={index} >
+              <div className="border border-none rounded-4xl h-[288px] w-[237.19px] md:h-[588px] md:w-[537.19px] shadow-sm hover:shadow-lg transition bg-[#F4F4F4] flex flex-col items-center justify-center ">
                 <img
                   src={member.image}
                   alt={member.name}
                   className="w-[232px] h-[232px] rounded-full mx-auto mb-8 object-cover"
                 />
-                <h4 className="text-[50.81px] leading-[50px] font-bold text-black">
+                <h4 className="text-[50.81px] mb-4 leading-[50px] font-bold text-black">
                   {member.name}
                 </h4>
-                <p className="text-gray-600 mb-4 text-[25.41px] leading-[36px]">
+                <p className="text-gray-600 mb-6 text-[25.41px] leading-[36px]">
                   {member.role}
                 </p>
                 <div className="flex justify-center space-x-6 text-black">
                   <a href={member.socials.linkedin} target="_blank" rel="noreferrer">
-                    <FaLinkedin className="w-[29px] h-[29px]" />
+                    <FaLinkedin className="w-[29.4px] h-[29.4px]" />
                   </a>
                 </div>
               </div>
