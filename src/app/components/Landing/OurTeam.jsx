@@ -54,16 +54,16 @@ export default function OurTeam() {
   }, []);
 
   return (
-    <div className="pl-16 bg-white text-center">
+    <div className=" md:pl-16 bg-white text-center">
       <button className="text-white bg-black py-[12px] px-[11px] rounded-xl text-md md:py-[16px] md:px-[16px] md:rounded-xl md:text-xl font-medium">
         Our Team
       </button>
 
       <div className="flex flex-col items-center justify-center text-center">
-        <h2 className="text-[15px] md:text-[56px] leading-[67px] font-[600] mb-6 pt-8">
+        <h2 className="mx-6 md:mx-0 text-[30px] md:text-[56px] font-[600] mb-6 pt-8">
           Meet the Team Behind the Magic
         </h2>
-        <p className="text-gray-700 mb-16 font-[400] px-0 md:px-30 text-[10px] md:text-[18px] leading-[27px] w-[90%] md:w-[60%] ">
+        <p className="text-gray-700 mb-6 md:mb-16 font-[400] px-0 md:px-30 text-base md:text-[18px] leading-[27px] w-[85%] md:w-[60%] ">
           At Zynspark, we're a group of creative thinkers, strategists, and
           problem-solvers. Together, we combine our expertise and passion to
           bring your ideas to life and make your brand shine.
@@ -100,16 +100,16 @@ export default function OurTeam() {
         >
           {teamMembers.map((member, index) => (
             <SwiperSlide key={index} >
-              <div className="border border-none rounded-4xl h-[288px] w-[237.19px] md:h-[588px] md:w-[537.19px] shadow-sm hover:shadow-lg transition bg-[#F4F4F4] flex flex-col items-center justify-center ">
+              <div className="m-10 border border-none rounded-3xl md:rounded-4xl h-[360px] w-[337.19px] md:h-[588px] md:w-[537.19px] shadow-sm hover:shadow-lg transition bg-[#F4F4F4] flex flex-col items-center justify-center ">
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-[232px] h-[232px] rounded-full mx-auto mb-8 object-cover"
+                  className="w-[162px] h-[162px] md:w-[232px] md:h-[232px] rounded-full mx-auto md:mb-8 object-cover"
                 />
-                <h4 className="text-[50.81px] mb-4 leading-[50px] font-bold text-black">
+                <h4 className="text-[30px] md:text-[50.81px] md:mb-4 leading-[50px] font-bold text-black">
                   {member.name}
                 </h4>
-                <p className="text-gray-600 mb-6 text-[25.41px] leading-[36px]">
+                <p className="text-gray-600 md:mb-6 text-[15px] md:text-[25.41px] leading-[36px]">
                   {member.role}
                 </p>
                 <div className="flex justify-center space-x-6 text-black">

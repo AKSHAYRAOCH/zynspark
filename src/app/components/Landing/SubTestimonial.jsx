@@ -98,7 +98,7 @@ const Star = ({ filled }) => (
 );
 
 const TestimonialCard = ({ name, position, image, stars, text }) => (
-  <div className="rounded-4xl border border-gray-200 p-4 md:p-6 shadow-sm bg-white w-full max-w-xs md:max-w-sm">
+  <div className="rounded-4xl border border-gray-200 p-4 md:p-6 shadow-sm bg-white max-w-sm">
     <div className="flex ">
       {[...Array(5)].map((_, i) => (
         <Star key={i} filled={i < stars} />
@@ -129,8 +129,8 @@ const SubTestimonials = ({ selectedCategory }) => {
     return (
       <div className="bg-white">
         {/* Mobile View */}
-        <div className="md:hidden px-4 py-8">
-          <div className="flex overflow-x-auto gap-4 pb-4 hide-scrollbar">
+        <div className="md:hidden px-4">
+          <div className="flex overflow-x-auto gap-6 pb-4 hide-scrollbar">
             {filteredTestimonials.map((t, index) => (
               <div key={index} className="flex-shrink-0 w-64">
                 <TestimonialCard {...t} />

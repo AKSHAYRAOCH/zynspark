@@ -33,7 +33,7 @@ export const Testimonials = () => {
             <h1 className="text-[30px] md:text-[56px] font-[600] leading-snug mb-4">
               What Our Clients Are Saying
             </h1>
-            <p className="text-[18px] font-[400] leading-relaxed text-gray-900 mb-9 md:pr-12 pb-6 sm:pb-8 font-roboto">
+            <p className="text-base md:text-[18px] font-[400] leading-relaxed text-gray-900 mb-9 md:pr-12 pb-6 sm:pb-8 font-roboto">
               We believe in building strong, lasting relationships with our clients. Hear how we've helped businesses succeed and grow, from brand building to digital transformation.
             </p>
 
@@ -52,7 +52,7 @@ export const Testimonials = () => {
                 <p
                   key={idx}
                   onClick={() => setSelectedCategory(category)}
-                  className={`py-4 px-10 rounded-full text-sm cursor-pointer transition ${
+                  className={`py-2 px-5 md:py-4 md:px-10 rounded-full text-sm cursor-pointer transition ${
                     selectedCategory === category
                       ? 'bg-[#892ED3] text-white'
                       : 'bg-[#EBE8FF] text-[#892ED3] hover:bg-[#d5d0f5]'
@@ -70,7 +70,7 @@ export const Testimonials = () => {
                   <p
                     key={idx}
                     onClick={() => setSelectedCategory(category)}
-                    className={`py-4 px-[21px] rounded-full text-sm cursor-pointer transition ${
+                    className={`py-2 px-5 md:py-4 md:px-10 rounded-full text-sm cursor-pointer transition ${
                       selectedCategory === category
                         ? 'bg-[#892ED3] text-white'
                         : 'bg-[#EBE8FF] text-[#892ED3] hover:bg-[#d5d0f5]'
@@ -86,7 +86,7 @@ export const Testimonials = () => {
         </div>
 
         {/* Right side */}
-        <div className="">
+        <div>
           <SubTestimonials selectedCategory={selectedCategory} />
         </div>
       </div>

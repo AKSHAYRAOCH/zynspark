@@ -21,9 +21,11 @@ export const Header = () => {
             // Determine if background is light or dark
             const isLight = isLightBackground(bgColor);
             setIsDarkBackground(isLight);
+          }else{
+            setIsDarkBackground(false);
           }
         });
-      },{ threshold: [ 0.3, 0.4, 0.5, 1] }
+      },{ threshold: [ 0.3, 0.4, 0.5] }
   );
   // Observe all sections on your page
   const sections = document.querySelectorAll('section');

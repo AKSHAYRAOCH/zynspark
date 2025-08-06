@@ -10,7 +10,7 @@ export const LetsConnect = () => {
   return (
     <section className="text-center px-4 sm:px-6">
       <div className="bg-black rounded-xl w-full pt-8 md:pt-[60px] px-6 md:px-[100px]">
-        <h1 className="text-3xl sm:text-5xl md:text-[80px] leading-[1.2] md:leading-[96px] font-semibold text-white">
+        <h1 className="text-[30px] md:text-[80px] leading-[1.2] md:leading-[96px] font-semibold text-white">
           Transform Your Vision into Reality—Let's Connect!
         </h1>
         

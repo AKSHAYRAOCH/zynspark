@@ -38,7 +38,7 @@ const HeroSection = () => {
 
 
   return (
-    <section className="relative bg-white overflow-hidden min-h-[900px] h-full md:h-screen border-none outline-none mt-10">
+    <section className="relative bg-white overflow-hidden min-h-[900px] h-screen border-none outline-none mt-10">
 
       {/* 🧩 Matter.js Canvas Background */}
       <div className="absolute inset-0 z-0">
@@ -119,8 +119,8 @@ const HeroSection = () => {
       </div>
 
       {/* 🌟 Main Hero Content */}
-      <div className="relative z-20 mt-[60px] md:mt-[200px] md:px-4">
-        <div className="flex justify-center items-center gap-[10px]">
+      <div className="relative z-20 mt-[60px] md:mt-[200px] px-0 md:px-4">
+        <div className="flex justify-center items-center gap-[5px] md:gap-[10px]">
           <h1 className="text-[30px] md:text-[60px] lg:text-[75px] leading-[1.2] md:leading-[96px] font-[520] text-center">
             End-to-End Support for:
             <br className="hidden sm:block" />
@@ -142,13 +142,13 @@ const HeroSection = () => {
           </h1>
         </div>
 
-        <div className="flex justify-center mt-[30px] items-center font-sans px-0 md:px-2 pt-10 md:pt-25">
-          <h2 className="text-center text-sm md:text-[18px] mx-auto font-[300] md:font-[400]">
+        <div className="mt-[30px] items-center font-sans px-0 md:px-2 pt-10 md:pt-25">
+          <h2 className="text-center text-base md:text-[18px] mx-auto font-[400]">
             Zynspark blends creativity and strategy to help your brand grow.
           </h2>
         </div>
 
-        <div className="flex justify-center items-center p-8 mt-[10px]  md:mt-[15px] text-md sm:text-xl">
+        <div className="flex justify-center items-center p-8 mt-[5px]  md:mt-[15px] text-md sm:text-xl">
           <Link href="/contact" className="text-white bg-[#A270FF] hover:bg-[#8a5ceb] py-3 px-6 sm:py-[20px] sm:px-[40px] rounded-xl inline-block text-center transition-colors duration-200">
             Contact Us
           </Link>
