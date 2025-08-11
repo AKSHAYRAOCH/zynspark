@@ -55,7 +55,7 @@ export default function ServiceHeroSection() {
 
       {/* Centered Content */}
       <div className="flex flex-col justify-center items-center z-20 max-w-6xl">
-        <h1 className="text-[30px] md:text-[60px] lg:text-[80px] px-28 font-bold">
+        <h1 className="text-[25px] sm:text-[30px] md:text-[60px] lg:text-[80px] px-10 sm:px-6 md:px-28 font-bold">
           Seamless Services for a Stronger
             <AnimatePresence mode="wait">
               <motion.span
@@ -72,7 +72,7 @@ export default function ServiceHeroSection() {
           
         </h1>
 
-        <p className="text-sm md:text-[18px] text-gray-300 mt-2 ">
+        <p className="text-[15px] text-center md:text-[18px] px-8 sm:px-6 md:px-0 text-gray-300 mt-2">
           We don't just provide services; we create experiences that truly connect, engage, and deliver results.
         </p>
       </div>

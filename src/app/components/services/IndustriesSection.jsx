@@ -22,14 +22,14 @@ export default function IndustriesSection() {
   }, []);
 
   return (
-    <section className="bg-[#f7f7f7] py-12 md:py-20 px-4 sm:px-6 h-screen ">
+    <section className="bg-[#f7f7f7] py-12 md:py-20 px-4 sm:px-6 md:h-screen ">
       <div className="mx-auto my-10 text-center">
         <button className="text-white bg-black py-2 px-4 md:px-[16px] md:py-[12px] rounded-lg text-sm sm:text-[20px] font-[600]">
           Industries
         </button>
 
-        <h2 className="text-3xl sm:text-[56px] font-bold my-4 sm:my-0 flex flex-row justify-center items-center gap-2 flex-wrap">
-          <div className='pt-6'>We work across{' '}</div>
+        <h2 className="text-[25px] sm:text-[30px] md:text-[56px] font-bold my-4 sm:my-0 flex flex-row justify-center items-center gap-2 flex-wrap">
+          <div className='md:pt-6'>We work across{' '}</div>
           <span className="relative h-[40px] w-[100px] sm:w-[120px] ">
             <AnimatePresence mode="wait">
               <motion.span
@@ -46,14 +46,14 @@ export default function IndustriesSection() {
           </span>
         </h2>
 
-        <p className="text-[#000000B2] flex justify-center mb-8 sm:mb-10 text-base sm:text-[18px] mt-6 font-[400] max-w-full mx-auto">
+        <p className="text-[#000000B2] flex justify-center mb-8 sm:mb-10 text-base md:text-[18px] mt-6 font-[400] max-w-full mx-auto">
           At Prolancers, we craft powerful identities that engage, inspire, and make a lasting impression.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-9">
           {services.map((item, index) => (
-            <div key={index} className="flex justify-between flex-col py-24 bg-white rounded-[32px] shadow-sm hover:shadow-md transition overflow-hidden group relative h-[588px] w-[515px]">               
-            <img src={item.img} alt={item.title} className="ml-24 w-full h-32 sm:h-40 md:h-[283px] md:w-[296px] object-contain"/>               
+            <div key={index} className="flex justify-between flex-col py-24 bg-white rounded-[32px] shadow-sm hover:shadow-md transition overflow-hidden group relative h-[388px] w-full md:h-[588px] md:w-[515px]">               
+            <img src={item.img} alt={item.title} className="md:ml-24 w-full h-32 md:h-[283px] md:w-[296px] object-contain"/>               
             <h3 className="font-[600] text-base sm:text-lg md:text-[30px]">{item.title}</h3>               
             <div className="absolute inset-0 bg-black backdrop-blur-sm flex items-center justify-center text-center opacity-0 group-hover:opacity-75 transition-opacity duration-300 gap-1">                 
               <span className="text-white text-lg sm:text-xl md:text-4xl font-medium">Know More</span>                 

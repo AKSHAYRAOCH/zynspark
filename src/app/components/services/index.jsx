@@ -7,7 +7,7 @@ import ServiceProcessSection from './ServiceProcess'
 
 export const ServicesComponent = () => {
   return (
-    <div>
+    <div className='h-full w-full overflow-hidden'>
         <ServiceHeroSection />
         <ElevateBusiness />
         <IndustriesSection />

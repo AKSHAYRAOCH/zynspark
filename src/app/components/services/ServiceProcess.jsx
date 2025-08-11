@@ -25,8 +25,8 @@ export default function OurProcessSection() {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <section className="bg-white py-16 h-screen m-36">
-      <div className=" mx-auto px-4 grid md:grid-cols-2 gap-20 items-center">
+    <section className="bg-white py-16 md:h-screen mt-10 md:mt-0 md:m-36">
+      <div className=" md:mx-auto md:px-4 grid md:grid-cols-2 gap-20 items-center">
 
         {/* Left Side - Text and Steps */}
         <div>
@@ -34,12 +34,12 @@ export default function OurProcessSection() {
         Our Process
       </button>
 
-          <h2 className="text-3xl sm:text-[56px] font-[600] leading-snug my-4">
+          <h2 className="text-[25px] text-center md:text-left sm:text-[30px] md:text-[56px] font-[600] leading-snug my-4">
             Planning to Execution – <br/>
             You can see it all
           </h2>
 
-          <p className="text-gray-500 mb-10 max-w-lg text-[18px] font-[400]">
+          <p className="text-gray-500 text-center md:text-left mb-10 max-w-lg text-base md:text-[18px] font-[400]">
             We collaborate closely, creating tailored strategies that deliver impactful results every step of the way.
           </p>
 
@@ -48,7 +48,7 @@ export default function OurProcessSection() {
               <button
                 key={step.id}
                 onClick={() => setActiveStep(index)}
-                className={`w-[562px] h-[100px] text-left py-4 px-6 rounded-xl text-[32px] font-medium transition-all duration-300 ${
+                className={`w-[262px] h-[50px] md:w-[562px] md:h-[100px] text-left py-4 px-6 rounded-xl text-[15px] md:text-[32px] font-medium transition-all duration-300 ${
                   activeStep === index
                     ? 'bg-black text-white'
                     : 'border border-black text-black'
@@ -76,7 +76,7 @@ export default function OurProcessSection() {
                 ease: 'easeInOut',
               },
             }}
-            className="w-[680px] h-[450px]"
+            className="w-[580px] h-[250px] md:w-[680px] md:h-[450px]"
           />
         </div>
       </div>

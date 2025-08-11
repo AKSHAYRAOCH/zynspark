@@ -16,7 +16,7 @@ export default function ImpactSection() {
             Testimonials
           </button>
 
-          <h2 className="text-3xl sm:text-[56px] font-bold mt-6 mb-4 sm:my-8">
+          <h2 className="text-[25px] sm:text-[30px] md:text-[56px] font-bold mt-6 mb-4 sm:my-8">
             Here's a glimpse of our impact and success
           </h2>
 
