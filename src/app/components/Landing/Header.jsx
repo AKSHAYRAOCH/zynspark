@@ -11,45 +11,72 @@ export const Header = () => {
   const [isDarkBackground, setIsDarkBackground] = useState(false);
 
   // Add this useEffect to detect background changes
+  // useLayoutEffect(() => {
+  //   const observer = new IntersectionObserver(
+  //     (entries) => {
+  //       entries.forEach((entry) => {
+  //         if (entry.isIntersecting) {
+  //           // Get the computed background color of the section
+  //           const bgColor = window.getComputedStyle(entry.target).backgroundColor;
+  //           // Determine if background is light or dark
+  //           const isLight = isLightBackground(bgColor);
+  //           setIsDarkBackground(isLight);
+  //         }else{
+  //           setIsDarkBackground(false);
+  //         }
+  //       });
+  //     },{ threshold: [ 0.3, 0.4, 0.5] }
+  // );
+  // // Observe all sections on your page
+  // const sections = document.querySelectorAll('section');
+  // sections.forEach(section => observer.observe(section));
+
+  // return () => observer.disconnect();
+  // }, [10]);
+
+  // // Helper function to determine if background is light
+  // const isLightBackground = (bgColor) => {
+  //   // Convert RGB to brightness value
+  //   const rgb = bgColor.match(/\d+/g);
+  //   if (rgb) {
+  //     const brightness = (parseInt(rgb[0]) * 299 + parseInt(rgb[1]) * 587 + parseInt(rgb[2]) * 114) / 1000;
+  //     console.log(rgb);
+  //     if(brightness <= 10){
+  //       return false;
+  //     }
+  //     if(brightness >= 300 && brightness == 11){
+  //       return false;
+  //     }
+  //   }
+  //   return true;
+  // };
+
   useLayoutEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            // Get the computed background color of the section
-            const bgColor = window.getComputedStyle(entry.target).backgroundColor;
-            // Determine if background is light or dark
-            const isLight = isLightBackground(bgColor);
-            setIsDarkBackground(isLight);
-          }else{
+          // Check if the intersecting element has data-component="LetsConnect"
+          const dataComponent = entry.target.getAttribute('data-component');
+          
+          if (entry.isIntersecting && (dataComponent === 'LetsConnect'  || dataComponent === 'OurTeam')) {
             setIsDarkBackground(false);
+          } else{
+            setIsDarkBackground(true);
           }
         });
-      },{ threshold: [ 0.3, 0.4, 0.5] }
-  );
-  // Observe all sections on your page
-  const sections = document.querySelectorAll('section');
-  sections.forEach(section => observer.observe(section));
-
-  return () => observer.disconnect();
-  }, [10]);
-
-  // Helper function to determine if background is light
-  const isLightBackground = (bgColor) => {
-    // Convert RGB to brightness value
-    const rgb = bgColor.match(/\d+/g);
-    if (rgb) {
-      const brightness = (parseInt(rgb[0]) * 299 + parseInt(rgb[1]) * 587 + parseInt(rgb[2]) * 114) / 1000;
-      console.log(rgb);
-      if(brightness <= 10){
-        return false;
+      },
+      { 
+        threshold: [0.1, 0.3, 0.5],
+        rootMargin: '-80px 0px 0px 0px' // Account for header height
       }
-      if(brightness >= 300 && brightness == 11){
-        return false;
-      }
-    }
-    return true;
-  };
+    );
+
+    // Observe all sections with data-component attribute
+    const sections = document.querySelectorAll('[data-component]');
+    sections.forEach(section => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, [isDarkBackground]);
 
   return (
     <>
@@ -109,17 +136,17 @@ export const Header = () => {
           <nav className={`hidden md:block transition-all duration-300 `}>
             <ul className="flex space-x-6 text-base">
               <li>
-                <a href="/" className={`transition-colors duration-200 ${isDarkBackground ? 'text-gray-900 hover:text-[#A270FF]' : 'text-white hover:text-[#A270FF]' }`}>
+                <a href="/" className={`transition-colors duration-200 ${isDarkBackground ? 'text-gray-900 hover:text-[#A270FF]' : 'text-purple-500 hover:text-white' }`}>
                   Home
                 </a>
               </li>
               <li>
-                <a href="/service" className={`transition-colors duration-200 ${isDarkBackground ? 'text-gray-900 hover:text-[#A270FF]': 'text-white hover:text-[#A270FF]'}`}>
+                <a href="/service" className={`transition-colors duration-200 ${isDarkBackground ? 'text-gray-900 hover:text-[#A270FF]': 'text-purple-500 hover:text-white'}`}>
                   Service
                 </a>
               </li>
               <li>
-                <a href="/contact" className={`transition-colors duration-200 ${isDarkBackground ? 'text-gray-900 hover:text-[#A270FF]' : 'text-white hover:text-[#A270FF]'}`}>
+                <a href="/contact" className={`transition-colors duration-200 ${isDarkBackground ? 'text-gray-900 hover:text-[#A270FF]' : 'text-purple-500 hover:text-white'}`}>
                   Contact Us
                 </a>
               </li>
@@ -130,7 +157,7 @@ export const Header = () => {
           <div className="flex items-center space-x-4">
             {/* Desktop Buttons */}
             <div className="hidden md:flex items-center space-x-4">
-              <a href="/contact" className="px-4 py-2 bg-black text-white rounded-xl text-base hover:bg-gray-800 transition-colors duration-200">
+              <a href="/contact" className= {`px-4 py-2 text-white rounded-xl text-base hover:bg-gray-800 transition-colors duration-200 ${isDarkBackground ? 'bg-black':'bg-purple-500'}`} >
                 Contact Us
               </a>
             </div>

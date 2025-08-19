@@ -93,7 +93,7 @@ export default function OurTeam() {
               },
               1024: { 
                 slidesPerView: 3.5,
-                spaceBetween: 250,
+                spaceBetween: 400,
                 centeredSlides: false,
               },
             }}

@@ -132,7 +132,7 @@ const HeroSection = () => {
                   animate={{ y: "0%", opacity: 1 }}
                   exit={{ y: "-100%", opacity: 0 }}
                   transition={{ duration: 0.4 }}
-                  className="absolute top-0 left-0 w-full text-center text-[#A270FF] my-10 md:my-25 " 
+                  className="absolute top-0 left-0 w-full text-center text-[#A270FF] my-10 md:my-25 bg-white" 
                 >
                   {keywords[currentKeyword]}
                 </motion.span>

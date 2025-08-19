@@ -5,12 +5,12 @@ import Logo2 from '../../../../public/images/landingImages/brands/VR LOGO.svg'
 
 export const TrustedCompanies = () => {
   return (
-    <div className='flex flex-col items-center justify-center px-4 py-12 md:py-16 h-screen bg-white'>
-      <h1 className='text-[30px] md:text-[56px] leading-16 font-semibold mb-8 md:mb-20'>
+    <div className='flex flex-col items-center justify-center px-4 py-12 md:py-16 h-screen md:max-h-fit bg-white'>
+      <h1 className='text-[30px] md:text-[56px] leading-16 font-semibold mb-8 md:mb-20 mt-54'>
         Trusted Companies
       </h1>
      
-      <div className='flex justify-center flex-wrap items-center gap-6 sm:gap-8 md:gap-12 max-w-6xl mx-auto'>
+      <div className='flex justify-center flex-wrap items-center gap-6 sm:gap-8 md:gap-12 mb-54'>
         <div className='w-32 sm:w-40 md:w-48 lg:w-56 h-auto'>
           <Image 
             src={Logo1} 

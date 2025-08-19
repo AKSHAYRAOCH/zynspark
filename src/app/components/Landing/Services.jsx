@@ -50,7 +50,7 @@ export const Services = () => {
   }, []);
 
   return (
-    <div className="text-center px-4 sm:px-6 lg:px-8 ">
+    <div className="text-center px-4 sm:px-6 lg:px-8 bg-white">
       <button className="text-white bg-black py-[12px] px-[11px] rounded-xl text-md md:py-[16px] md:px-[16px] md:rounded-xl md:text-xl font-medium">
         Our Services
       </button>

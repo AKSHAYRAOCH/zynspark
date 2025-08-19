@@ -25,14 +25,17 @@ export default function OurProcessSection() {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <section className="bg-white py-16 md:h-screen mt-10 md:mt-0 md:m-36">
+    <section className="bg-white py-16 items-center mt-10 md:mt-0 md:m-36">
       <div className=" md:mx-auto md:px-4 grid md:grid-cols-2 gap-20 items-center">
 
         {/* Left Side - Text and Steps */}
         <div>
-        <button className="text-white bg-black py-2 px-4 md:px-[16px] md:py-[12px] rounded-lg text-sm sm:text-[20px]">
+          <div className="text-center md:text-left">
+        <button className=" text-white bg-black py-2 px-4 md:px-[16px] md:py-[12px] rounded-lg text-sm sm:text-[20px]">
+         
         Our Process
       </button>
+       </div>
 
           <h2 className="text-[25px] text-center md:text-left sm:text-[30px] md:text-[56px] font-[600] leading-snug my-4">
             Planning to Execution – <br/>
