@@ -10,10 +10,10 @@ export const ServiceCard = ({ title, description, image }) => {
         className="rounded-xl md:rounded-2xl  w-[300px] md:w-[570px] h-[225px]  object-cover object-top"
       />
       <div className="border mt-4 rounded-xl md:rounded-2xl  p-4 h-[225px] border-gray-300 text-left "> 
-        <p className="bg-black text-white inline-block px-[15px] py-[5px] md:px-[35px] md:py-[15px] gap-[10px] font-[500] rounded-lg md:rounded-2xl text-[15px] md:text-[24px] mb-4">
+        <p className="bg-black text-white inline-block px-[15px] py-[5px] md:px-[25px] md:py-[10px] gap-[10px] font-[500] rounded-lg md:rounded-2xl text-[15px] md:text-[24px] mb-4">
           {title}
         </p>
-        <p className="text-[#00000099] text-[13px] md:text-[18px]">{description}</p>
+        <p className="text-[#00000099] md:text-[10px] lg:text-[18px]">{description}</p>
       </div>
     </div>
     </div>

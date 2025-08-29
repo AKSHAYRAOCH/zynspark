@@ -9,15 +9,13 @@ const services = [
   { icon: <FaFileAlt size={36} />, title: 'Branding' },
   { icon: <FaBullhorn size={36} />, title: 'Social-Media Marketing' },
   { icon: <FaPencilAlt size={36} />, title: 'Content Writing' },
-  { icon: <FaThLarge size={36} />, title: 'Product Design' },
   { icon: <IoIosSearch size={36} />, title: 'SEO Services' },
-  { icon: <FaAd size={36} />, title: 'Ads Management' },
-  { icon: <FaFileAlt size={36} />, title: 'Pitch Deck' },
+  { icon: <FaAd size={36} />, title: 'Ads Management' }
 ];
 
 export default function ElevateBusiness() {
-  const firstRow = services.slice(0, 5);
-  const secondRow = services.slice(5);
+  const firstRow = services
+  //const secondRow = services.slice(5);
 
   return (
     <section className=" bg-white py-12 md:py-20 px-4 sm:px-6 md:h-screen mt-44 mb-16">
@@ -33,27 +31,16 @@ export default function ElevateBusiness() {
         </p>
 
         {/* First Row - 5 items (3 on tablet, 2 on mobile) */}
-        <div className="mt-12 grid grid-cols-4 md:grid-cols-5 gap-4 sm:gap-6 md:place-items-center">
+        <div className='justify-center pt-2 sm:pt-12 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 md:place-items-center m-7 sm:m-0'>
           {firstRow.map((service, index) => (
             <div key={index}
-              className="bg-[#892ED314] text-[#892ED3] rounded-lg w-full md:max-w-[140px] max-w-[80px] h-[80px] sm:w-[150px] sm:h-[150px] md:w-[162px] md:h-[162px] p-2
-              flex flex-col items-center justify-center text-center">
-              <div className=" mb-6 sm:mb-5 mr-4 md:mr-0 md:mb-2 w-[15px] h-[15px] hidden sm:w-[18px] sm:h-[18px] md:w-[48px] md:h-[48px] ">{service.icon}</div>
-              <span className="p-2 text-[9px] sm:text-[18px] font-[400px]">{service.title}</span>
-            </div>
-          ))}
-        </div>
-
-        {/* Second Row - 4 items (3 on tablet, 2 on mobile) */}
-        <div className="mt-6 sm:mt-8 grid grid-cols-4 md:flex md:flex-wrap md:justify-center gap-4 sm:gap-6 md:gap-14 place-items-center">
-          {secondRow.map((service, index) => (
-            <div
-              key={index + 5}
-              className="bg-[#892ED314] text-[#892ED3] rounded-lg w-full md:max-w-[140px]  max-w-[80px] h-[80px] sm:w-[150px] sm:h-[150px] md:w-[162px] md:h-[162px] p-2
-              flex flex-col items-center justify-center text-center"
-            >
-              <div className="mb-6 sm:mb-5 mr-4 md:mr-0 md:mb-2 hidden sm:w-[18px] sm:h-[18px] md:w-[48px] md:h-[48px] ">{service.icon}</div>
-              <span className="p-2 text-[9px] sm:text-[18px] font-[400px]">{service.title}</span>
+              className={`bg-[#892ED314] text-[#892ED3] rounded-lg w-[100px] h-[100px] sm:w-[130px] sm:h-[130px] md:w-[162px] md:h-[162px] p-2 flex flex-col items-center justify-center text-center
+              ${index === 5 ? 'ml-0 lg:ml-[660px]' : ''}
+              ${index === 6 ? 'ml-0 lg:ml-[670px]' : ''}
+        
+      `}>
+              <div className=" mb-6 sm:mb-5 mr-4 md:mr-0 md:mb-2 w-[15px] h-[15px] sm:w-[18px] sm:h-[18px] md:w-[48px] md:h-[48px] ">{service.icon}</div>
+              <span className="p-2 text-[13px] sm:text-[18px] font-[400px]">{service.title}</span>
             </div>
           ))}
         </div>

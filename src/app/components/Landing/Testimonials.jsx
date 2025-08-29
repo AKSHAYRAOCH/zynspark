@@ -22,7 +22,7 @@ export const Testimonials = () => {
     <section className="flex px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20 bg-white h-full">
       <div className="flex max-w-screen-xl flex-col md:flex-row w-full">
         {/* Left side */}
-        <div className="w-full mx-0 md:ml-36 mr-6 my-36 md:w-1/1 px-0 sm:px-0 lg:pl-[120px]">
+        <div className="w-full mx-0 mr-6 my-36 md:w-1/1 px-0 sm:px-0 lg:pl-[120px]">
           <div className="text-center sm:text-left mb-6">
             <button className="text-white bg-black py-[12px] px-[11px] text-md md:py-[12px] md:px-[16px] rounded-lg md:text-xl font-medium">
               Testimonials

@@ -22,7 +22,7 @@ export default function IndustriesSection() {
   }, []);
 
   return (
-    <section className="bg-[#f7f7f7] py-12 md:py-20 px-4 sm:px-6 md:h-screen ">
+    <section className="bg-[#f7f7f7] py-12 md:py-20 px-4 sm:px-6 lg:h-screen ">
       <div className="mx-auto my-10 text-center">
         <button className="text-white bg-black py-2 px-4 md:px-[16px] md:py-[12px] rounded-lg text-sm sm:text-[20px] font-[600]">
           Industries
@@ -50,9 +50,9 @@ export default function IndustriesSection() {
           At Prolancers, we craft powerful identities that engage, inspire, and make a lasting impression.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-9">
+        <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-4 sm:gap-9">
           {services.map((item, index) => (
-            <div key={index} className="flex justify-between flex-col py-24 bg-white rounded-[32px] shadow-sm hover:shadow-md transition overflow-hidden group relative h-[388px] w-full md:h-[588px] md:w-[515px]">               
+            <div key={index} className="flex justify-between flex-col py-24 bg-white rounded-[32px] shadow-sm hover:shadow-md transition overflow-hidden group relative h-[388px] w-[315px] lg:h-[488px] lg:w-[415px] xl:h-[588px] xl:w-[515px]">               
             <img src={item.img} alt={item.title} className="md:ml-24 w-full h-32 md:h-[283px] md:w-[296px] object-contain"/>               
             <h3 className="font-[600] text-base sm:text-lg md:text-[30px]">{item.title}</h3>               
             <div className="absolute inset-0 bg-black backdrop-blur-sm flex items-center justify-center text-center opacity-0 group-hover:opacity-75 transition-opacity duration-300 gap-1">                 

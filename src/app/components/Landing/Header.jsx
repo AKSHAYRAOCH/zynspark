@@ -4,7 +4,8 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import logo from '../../../../public/images/logo.svg'
+import logo from '../../../../public/images/logo.png'
+
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -121,7 +122,7 @@ export const Header = () => {
       </div>
 
       {/* Main Header */}
-      <header className="border fixed top-0 left-0  w-full z-50 backdrop-blur-md border-gray-200 dark:border-gray-800 rounded-2xl">
+      <header className={`border ${isDarkBackground ? 'border-gray-300 ' : 'border-gray-800 ' } fixed top-0 left-0  w-full z-50 backdrop-blur-md rounded-lg`}>
         <div className=" flex items-center justify-between px-4 sm:px-6 py-4 text-black dark:text-white">
           {/* Logo */}
           <div className="flex items-center">
@@ -136,17 +137,17 @@ export const Header = () => {
           <nav className={`hidden md:block transition-all duration-300 `}>
             <ul className="flex space-x-6 text-base">
               <li>
-                <a href="/" className={`transition-colors duration-200 ${isDarkBackground ? 'text-gray-900 hover:text-[#A270FF]' : 'text-purple-500 hover:text-white' }`}>
+                <a href="/" className={`transition-colors duration-200 ${isDarkBackground ? 'text-gray-900 hover:text-[#A270FF]' : 'hover:text-purple-500 text-white' }`}>
                   Home
                 </a>
               </li>
               <li>
-                <a href="/service" className={`transition-colors duration-200 ${isDarkBackground ? 'text-gray-900 hover:text-[#A270FF]': 'text-purple-500 hover:text-white'}`}>
+                <a href="/service" className={`transition-colors duration-200 ${isDarkBackground ? 'text-gray-900 hover:text-[#A270FF]': 'hover:text-purple-500 text-white'}`}>
                   Service
                 </a>
               </li>
               <li>
-                <a href="/contact" className={`transition-colors duration-200 ${isDarkBackground ? 'text-gray-900 hover:text-[#A270FF]' : 'text-purple-500 hover:text-white'}`}>
+                <a href="/contact" className={`transition-colors duration-200 ${isDarkBackground ? 'text-gray-900 hover:text-[#A270FF]' : 'hover:text-purple-500 text-white'}`}>
                   Contact Us
                 </a>
               </li>
@@ -174,21 +175,4 @@ export const Header = () => {
 };
 
 
-
-
-
-// const isLightBackground = (bgColor) => {
-//   // Convert RGB to brightness value
-//   const rgb = bgColor.match(/\d+/g);
-//   if (rgb) {
-//     const brightness = (parseInt(rgb[0]) * 299 + parseInt(rgb[1]) * 587 + parseInt(rgb[2]) * 114) / 1000;
-//     console.log(rgb);
-//     if(brightness <= 10){
-//       return false;
-//     }
-//     if(brightness >= 300 && brightness == 11){
-//       return false;
-//     }
-//   }
-//   return true;
-// };
+export default Header;
