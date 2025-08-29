@@ -1,0 +1,21 @@
+{
+  "name": "Zynspark - Digital Agency",
+  "short_name": "Zynspark",
+  "description": "Zynspark is a leading digital agency providing end-to-end support for web design, UI/UX, branding, marketing, ads management, and social media marketing.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#A270FF",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity"],
+  "lang": "en",
+  "dir": "ltr"
+}
