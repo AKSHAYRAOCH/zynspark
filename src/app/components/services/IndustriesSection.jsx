@@ -55,10 +55,10 @@ export default function IndustriesSection() {
             <div key={index} className="flex justify-between flex-col py-24 bg-white rounded-[32px] shadow-sm hover:shadow-md transition overflow-hidden group relative h-[388px] w-[315px] lg:h-[488px] lg:w-[415px] xl:h-[588px] xl:w-[515px]">               
             <img src={item.img} alt={item.title} className="md:ml-24 w-full h-32 md:h-[283px] md:w-[296px] object-contain"/>               
             <h3 className="font-[600] text-base sm:text-lg md:text-[30px]">{item.title}</h3>               
-            <div className="absolute inset-0 bg-black backdrop-blur-sm flex items-center justify-center text-center opacity-0 group-hover:opacity-75 transition-opacity duration-300 gap-1">                 
-              <span className="text-white text-lg sm:text-xl md:text-4xl font-medium">Know More</span>                 
+            <a href="/contact" className="absolute inset-0 bg-black backdrop-blur-sm flex items-center justify-center text-center opacity-0 group-hover:opacity-75 transition-opacity duration-300 gap-1">                 
+              <span  className="text-white text-lg sm:text-xl md:text-4xl font-medium">Know More</span>                 
               <IoIosArrowForward className='text-white text-lg sm:text-xl md:text-4xl' />               
-            </div>             
+            </a>             
           </div>
           ))}
         </div>

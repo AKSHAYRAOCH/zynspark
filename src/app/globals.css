@@ -11,6 +11,17 @@ section {
   }
 }
 
+@media (max-width: 768px) and (orientation: portrait) {
+  /* Styles for tablet portrait mode */
+  .container { width: 90%; }
+}
+
+/* For screens 14 inches and smaller (roughly 1366px and below) */
+@media (max-width: 1366px) {
+  /* Adjust font sizes, margins, element widths */
+  body { font-size: 14px; }
+  .container { width: 95%; }
+}
 
 .hide-scrollbar::-webkit-scrollbar {
   display: none;

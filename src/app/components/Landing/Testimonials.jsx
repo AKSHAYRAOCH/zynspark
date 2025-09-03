@@ -19,10 +19,10 @@ export const Testimonials = () => {
   const secondLine = testimonialCategories.slice(3);
 
   return (
-    <section className="flex px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20 bg-white h-full">
+    <section className="flex justify-center px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20 bg-white h-full">
       <div className="flex max-w-screen-xl flex-col md:flex-row w-full">
         {/* Left side */}
-        <div className="w-full mx-0 mr-6 my-36 md:w-1/1 px-0 sm:px-0 lg:pl-[120px]">
+        <div className="w-full mx-0 mr-6 my-36 md:w-1/1 px-0 sm:px-0 ">
           <div className="text-center sm:text-left mb-6">
             <button className="text-white bg-black py-[12px] px-[11px] text-md md:py-[12px] md:px-[16px] rounded-lg md:text-xl font-medium">
               Testimonials
@@ -70,7 +70,7 @@ export const Testimonials = () => {
                   <p
                     key={idx}
                     onClick={() => setSelectedCategory(category)}
-                    className={`py-2 px-5 md:py-4 md:px-10 rounded-full text-sm cursor-pointer transition ${
+                    className={`py-2 px-5 md:py-4 rounded-full text-sm cursor-pointer transition ${
                       selectedCategory === category
                         ? 'bg-[#892ED3] text-white'
                         : 'bg-[#EBE8FF] text-[#892ED3] hover:bg-[#d5d0f5]'

@@ -38,7 +38,7 @@ export default function OurProcessSection() {
        </div>
 
           <h2 className="text-[25px] text-center md:text-left sm:text-[30px] md:text-[56px] font-[600] leading-snug my-4">
-            Planning to Execution – <br/>
+            Planning to Execution –
             You can see it all
           </h2>
 

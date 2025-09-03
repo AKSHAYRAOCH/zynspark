@@ -11,47 +11,6 @@ export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDarkBackground, setIsDarkBackground] = useState(false);
 
-  // Add this useEffect to detect background changes
-  // useLayoutEffect(() => {
-  //   const observer = new IntersectionObserver(
-  //     (entries) => {
-  //       entries.forEach((entry) => {
-  //         if (entry.isIntersecting) {
-  //           // Get the computed background color of the section
-  //           const bgColor = window.getComputedStyle(entry.target).backgroundColor;
-  //           // Determine if background is light or dark
-  //           const isLight = isLightBackground(bgColor);
-  //           setIsDarkBackground(isLight);
-  //         }else{
-  //           setIsDarkBackground(false);
-  //         }
-  //       });
-  //     },{ threshold: [ 0.3, 0.4, 0.5] }
-  // );
-  // // Observe all sections on your page
-  // const sections = document.querySelectorAll('section');
-  // sections.forEach(section => observer.observe(section));
-
-  // return () => observer.disconnect();
-  // }, [10]);
-
-  // // Helper function to determine if background is light
-  // const isLightBackground = (bgColor) => {
-  //   // Convert RGB to brightness value
-  //   const rgb = bgColor.match(/\d+/g);
-  //   if (rgb) {
-  //     const brightness = (parseInt(rgb[0]) * 299 + parseInt(rgb[1]) * 587 + parseInt(rgb[2]) * 114) / 1000;
-  //     console.log(rgb);
-  //     if(brightness <= 10){
-  //       return false;
-  //     }
-  //     if(brightness >= 300 && brightness == 11){
-  //       return false;
-  //     }
-  //   }
-  //   return true;
-  // };
-
   useLayoutEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {

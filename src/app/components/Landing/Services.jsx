@@ -18,26 +18,44 @@ const services = [
     title: "Social Media Marketing",
     description:
       "We build and execute social strategies that grow your brand & spark engagement. From content planning to analytics, we handle it all—platform to post.",
-    image: "/images/landingImages/services/service1.png",
+    image: "/images/landingImages/services/service2.png",
   },
   {
     title: "Pitch Deck",
     description:
       "We design compelling pitch decks that tell your story with clarity and impact. From visuals to messaging, we help you win over investors and clients.",
-    image: "/images/landingImages/services/service1.png",
+    image: "/images/landingImages/services/service3.png",
   },
   {
-    title: "Pitch Deck",
+    title: "Content Writing",
     description:
-      "We design compelling pitch decks that tell your story with clarity and impact. From visuals to messaging, we help you win over investors and clients.",
-    image: "/images/landingImages/services/service1.png",
+      "We craft clear, engaging content tailored to your brand voice and audience. From web copy to blogs, we turn ideas into words that work.",
+    image: "/images/landingImages/services/Content Writing.png",
   },
   {
-    title: "Pitch Deck",
+    title: "Ads Management",
     description:
-      "We design compelling pitch decks that tell your story with clarity and impact. From visuals to messaging, we help you win over investors and clients.",
-    image: "/images/landingImages/services/service1.png",
+      "We craft and manage high-performing ad campaigns that drive real results. From Meta to Google, we optimize every click to boost reach and ROI.",
+    image: "/images/landingImages/services/Ads Management.png",
   },
+  {
+    title: "Web Design",
+    description:
+      "We design websites that are not only visually stunning but also user-friendly and optimized for conversions. Your online presence, built to perform and impress.",
+    image: "/images/landingImages/services/Web Design.png",
+  },
+  {
+    title: "Web Development",
+    description:
+      "We turn your website ideas into fully functional, responsive sites. From backend to frontend, we ensure seamless performance across all devices.",
+    image: "/images/landingImages/services/Web Development.png",
+  },
+  {
+    title: "SEO Services",
+    description:
+      "We optimize your website to rank higher, drive organic traffic, and increase visibility. With data-driven strategies, we help you get found by the right audience.",
+    image: "/images/landingImages/services/SEO Services.png",
+  }
 ];
 
 export const Services = () => {
